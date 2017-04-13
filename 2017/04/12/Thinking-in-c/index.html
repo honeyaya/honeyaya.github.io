@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>Thinking in c++ | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="3月20号到4月5号，稀稀疏疏的写了两个星期的华为2017精英挑战赛的代码，是一个网络中的经典选址问题，这里不做过多的描述，强撸了七八百行代码，这个算是为数不多自己写完的，一直不太知道怎么开始写，然后硬着头皮开始这个事情，居然还是把答案写出来了，不过优化真心做的不够好 这里也就发现一个很大的问题，既有的逻辑中，主要还是面向过程的思维，整个的代码基本上是一个点一个点的解决，这样子造成了代码的不流畅性">
+<meta name="keywords" content="书籍">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Thinking in c++">
+<meta property="og:url" content="http://yoursite.com/2017/04/12/Thinking-in-c/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="3月20号到4月5号，稀稀疏疏的写了两个星期的华为2017精英挑战赛的代码，是一个网络中的经典选址问题，这里不做过多的描述，强撸了七八百行代码，这个算是为数不多自己写完的，一直不太知道怎么开始写，然后硬着头皮开始这个事情，居然还是把答案写出来了，不过优化真心做的不够好 这里也就发现一个很大的问题，既有的逻辑中，主要还是面向过程的思维，整个的代码基本上是一个点一个点的解决，这样子造成了代码的不流畅性">
+<meta property="og:image" content="c:/Users/smilecrazy/Desktop/捕获.PNG">
+<meta property="og:updated_time" content="2017-04-13T12:13:07.687Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Thinking in c++">
+<meta name="twitter:description" content="3月20号到4月5号，稀稀疏疏的写了两个星期的华为2017精英挑战赛的代码，是一个网络中的经典选址问题，这里不做过多的描述，强撸了七八百行代码，这个算是为数不多自己写完的，一直不太知道怎么开始写，然后硬着头皮开始这个事情，居然还是把答案写出来了，不过优化真心做的不够好 这里也就发现一个很大的问题，既有的逻辑中，主要还是面向过程的思维，整个的代码基本上是一个点一个点的解决，这样子造成了代码的不流畅性">
+<meta name="twitter:image" content="c:/Users/smilecrazy/Desktop/捕获.PNG">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+</head>
+
+  
+    
+      <body>
+    
+  
+      <div id="container" class="container">
+        <article id="post-Thinking-in-c" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+  <nav id="main-nav" class="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/tags">Tags</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS"></a>
+    
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Thinking in c++
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <p>3月20号到4月5号，稀稀疏疏的写了两个星期的华为2017精英挑战赛的代码，是一个网络中的经典选址问题，这里不做过多的描述，强撸了七八百行代码，这个算是为数不多自己写完的，一直不太知道怎么开始写，然后硬着头皮开始这个事情，居然还是把答案写出来了，不过优化真心做的不够好</p>
+<p>这里也就发现一个很大的问题，既有的逻辑中，主要还是面向过程的思维，整个的代码基本上是一个点一个点的解决，这样子造成了代码的不流畅性，于是在这一个星期，找到了浙大翁老师的c++的课程，把面向对象的三大特点以及虚构析构又学习了一遍，温故知新，我想说的就是这个道理。</p>
+<p>另外，这本《Thinkging in c++》看豆瓣评分还不错，希望这本书能帮助我解决一些问题，当然这里会持续不停更新这本书的收获：</p>
+<h5 id="第一章-Introduction-to-objects"><a href="#第一章-Introduction-to-objects" class="headerlink" title="第一章　Introduction　to　objects"></a>第一章　Introduction　to　objects</h5><p>1.bicycles for the mind as Steve Jobs is fond of saying</p>
+<p>Q1: Why objects are important and how to design with them?</p>
+<p>2.你解决问题的复杂度依赖于你对问题的抽象</p>
+<pre><code>&gt;The programmer must establish the association 
+&gt;
+&gt;between the machine model
+&gt;
+&gt; (in the “solution space,” which is the place where you’re modeling that problem, such as a computer) 
+&gt;
+&gt;and the model of the problem that is actually being solved 
+&gt;
+&gt;(in the “problem space,” which is the place where the problem exists)
+</code></pre><blockquote>
+<p>oop的思想： 从问题空间抽象</p>
+<p>The object-oriented approach goes a step farther by providing tools for the programmer to represent elements in the problem space. This representation is general enough that the programmer is not constrained to any particular type of problem.</p>
+<p>将 problem space中的elements 称之为 “objects” </p>
+<p>通过这种描述，你可以在解决问题的时候，你也可以了解问题本身</p>
+<p>Each object looks quite a bit like a little computer; it has a state, and it has operations that you can as<br>it to perform. However, this doesn’t seem like such a bad analogy to objects in the real world; they all have characteristics and behaviors.</p>
+</blockquote>
+<p>3.Alan Kay 总结的五条基本规则：</p>
+<p>​    a. Everything is an object.which can stores data and asking it to perform operations on itself.</p>
+<p>​    b. A program is a bunch of objects telling each other what to do by sending messages.</p>
+<p>​    c.Each object has its own memory made up of other objects. you create a new kind of object by making a package containing existing objects.</p>
+<p>​    d.Every objects has a type. That’s to say , the class , in which “class” is synonymous with “type”.</p>
+<p>​    e.All objects of a particular type can receive the same messages.</p>
+<ol>
+<li><blockquote>
+<p>first, creating abstract data types(classes) is a fundamental concept</p>
+<p>second, create variables of a type (objects or instances) and manipulate those varibles(calles sending messages or requests)</p>
+<p>third,the members of each class share come commonality:</p>
+<p>foruth, each member has its own state </p>
+</blockquote>
+</li>
+<li><p>oop能把问题的规模减小？ 这个有待验证</p>
+</li>
+<li><p>这个map的关系没太明白 </p>
+<blockquote>
+<p>Indeed, one of the challenges of object-oriented programming is to<br>create a one-to-one mapping between the elements in the problem<br>space and objects in the solution space</p>
+</blockquote>
+</li>
+<li><p>Interface establishes what requests you can make for a particular objects. </p>
+<p><img src="C:\Users\smilecrazy\Desktop\捕获.PNG" alt="捕获">​</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2017/04/12/Thinking-in-c/" class="article-date">
+  <time datetime="2017-04-12T05:55:08.000Z" itemprop="datePublished">2017-04-12</time>
+</a>
+
+        </li>
+        
+        
+          <li>
+            <span class="label">Tag:</span>
+            
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/书籍/">书籍</a></li></ul>
+
+
+          </li>
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/2017/04/11/基础研究/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Nuevo</strong>
+      <div class="article-nav-title">
+        
+          基础研究
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/04/12/家族传承/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Viejo</strong>
+      <div class="article-nav-title">家族办公室</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>No pains, no gains.</p>
+
+
+      </div>
+    </footer>
+
+      
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>

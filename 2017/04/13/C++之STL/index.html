@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>c++ STL | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="STL String string 类是一个模板类，用意字符串操作 1.构造赋值  string s1 = &amp;quot;hello&amp;quot; string s2(&amp;quot;hello&amp;quot;) string s2 = s1 s4.assign(s2)  2.字符访问  1.[]   s[0] 2.at(int) s.at(2)  有范围检查，超过范围，out of range 异常 3.s">
+<meta name="keywords" content="技术">
+<meta property="og:type" content="article">
+<meta property="og:title" content="c++ STL">
+<meta property="og:url" content="http://yoursite.com/2017/04/13/C++之STL/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="STL String string 类是一个模板类，用意字符串操作 1.构造赋值  string s1 = &amp;quot;hello&amp;quot; string s2(&amp;quot;hello&amp;quot;) string s2 = s1 s4.assign(s2)  2.字符访问  1.[]   s[0] 2.at(int) s.at(2)  有范围检查，超过范围，out of range 异常 3.s">
+<meta property="og:image" content="c:/Users/smilecrazy/Desktop/捕获3.PNG">
+<meta property="og:image" content="c:/Users/smilecrazy/Desktop/捕获2.PNG">
+<meta property="og:image" content="c:/Users/smilecrazy/Desktop/捕获.PNG">
+<meta property="og:image" content="c:/Users/smilecrazy/Desktop/捕获4.PNG">
+<meta property="og:image" content="c:/Users/smilecrazy/Desktop/捕获5.PNG">
+<meta property="og:updated_time" content="2017-04-13T12:12:53.045Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="c++ STL">
+<meta name="twitter:description" content="STL String string 类是一个模板类，用意字符串操作 1.构造赋值  string s1 = &amp;quot;hello&amp;quot; string s2(&amp;quot;hello&amp;quot;) string s2 = s1 s4.assign(s2)  2.字符访问  1.[]   s[0] 2.at(int) s.at(2)  有范围检查，超过范围，out of range 异常 3.s">
+<meta name="twitter:image" content="c:/Users/smilecrazy/Desktop/捕获3.PNG">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+</head>
+
+  
+    
+      <body>
+    
+  
+      <div id="container" class="container">
+        <article id="post-C++之STL" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+  <nav id="main-nav" class="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/tags">Tags</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS"></a>
+    
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      c++ STL
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <p>STL</p>
+<h5 id="String"><a href="#String" class="headerlink" title="String"></a>String</h5><p><img src="C:\Users\smilecrazy\Desktop\捕获3.PNG" alt="捕获"></p>
+<p>string 类是一个模板类，用意字符串操作</p>
+<p>1.构造赋值</p>
+<blockquote>
+<p><code>string s1 = &quot;hello&quot;</code></p>
+<p><code>string s2(&quot;hello&quot;)</code></p>
+<p><code>string s2 = s1</code></p>
+<p><code>s4.assign(s2)</code></p>
+</blockquote>
+<p>2.字符访问</p>
+<blockquote>
+<p>1.[]   <code>s[0]</code></p>
+<p>2.at(int) <code>s.at(2)</code>  有范围检查，超过范围，out of range 异常</p>
+<p>3.substr(int,int)  <code>s2=s1.substr(4,5)</code> 从s1的下标4开始取5个字符</p>
+<p>4.c_str()返回const char * 类型的字符串</p>
+</blockquote>
+<p>3.容量</p>
+<blockquote>
+<ol>
+<li><p>length() , size() </p>
+</li>
+<li><p>empty()</p>
+</li>
+<li><p>string对象的大小不需要某个特殊字符作为结束符，可以用成员属性</p>
+<p>来保存当前对象的大小</p>
+</li>
+</ol>
+</blockquote>
+<p>4.搜索</p>
+<blockquote>
+<p>1.<code>int p = str.find(&quot;CG&quot;,2)</code> // 从位置2开始查找”CG”,第一次出现的位置</p>
+<p>2.rfind() 从后给前找</p>
+</blockquote>
+<p>5.比较</p>
+<blockquote>
+<p>1.<code>s1.compare(s0)</code>  </p>
+<p>2.使用关系运算符 operator== &gt; ,&gt;=, &lt;, &lt;= ,!=</p>
+</blockquote>
+<p>6.修改器</p>
+<pre><code>&gt;1.`+ or  +=` 连接
+&gt;
+&gt;2.`append(string,int,int)`  `s2.append(s2,5,6)`  5是位置，6是长度
+&gt;
+&gt;3.insert()
+&gt;
+&gt;4.push_back()/pop_back()
+&gt;
+&gt;5.replace(int,int,string)  起始位置以及长度改成某字符串 
+</code></pre><p>7.流输入输出</p>
+<blockquote>
+<p>支持 &gt;&gt; or &lt;&lt; </p>
+</blockquote>
+<p>8.类型转换</p>
+<blockquote>
+<p>​    to_string()</p>
+</blockquote>
+<hr>
+<p>c++ 两个方面体现了重用</p>
+<ul>
+<li><p>面向对象的设计思想，继承，多态以及标准类库</p>
+</li>
+<li><p>泛型程序设计，包括模板机制以及标准模板库STL 就是将一些常用的数据结构写成模板</p>
+<p>​</p>
+</li>
+</ul>
+<p>c++ STL 大致由 <strong>容器，迭代器，算法，函数对象</strong>  四个部分组成</p>
+<pre><code>&gt;* 容器是可容纳各种数据类型的数据结构
+&gt;
+&gt;      1.包括**顺序容器**和**关联容器**
+&gt;
+&gt;      2.还有一类不提供真正的用于存储元素的数据结构实现，称作容器适配器
+&gt;
+&gt;      3.容器适配器不支持迭代器，由程序员选择合适的底层数据结构
+&gt;
+&gt;* 迭代器是用于依次存取容器中元素的指示器
+&gt;
+&gt;      1.实质上是一类泛化了的指针
+&gt;
+&gt;      2.通过使用迭代器，开发者可以操作数据结构而无需关心其内部实现
+&gt;
+&gt;* STL还提供了一些常见算法的函数模板，使得算法与数据结构分离
+&gt;
+&gt;      1.可以对自定义的数据结构使用这些算法
+&gt;
+&gt;* 函数对象即重载了操作符()的对象
+&gt;
+&gt;      1.类的实例都可以称作为函数对象
+</code></pre><p><img src="C:\Users\smilecrazy\Desktop\捕获2.PNG" alt="捕获"></p>
+<p><img src="C:\Users\smilecrazy\Desktop\捕获.PNG" alt="捕获"></p>
+<p><img src="C:\Users\smilecrazy\Desktop\捕获4.PNG" alt="捕获4"></p>
+<p><img src="C:\Users\smilecrazy\Desktop\捕获5.PNG" alt="捕获5"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2017/04/13/C++之STL/" class="article-date">
+  <time datetime="2017-04-13T02:12:53.000Z" itemprop="datePublished">2017-04-13</time>
+</a>
+
+        </li>
+        
+        
+          <li>
+            <span class="label">Tag:</span>
+            
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+
+
+          </li>
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/2017/04/12/家族传承/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Nuevo</strong>
+      <div class="article-nav-title">
+        
+          家族办公室
+        
+      </div>
+    </a>
+  
+  
+    <span id="article-nav-older" class="article-nav-link-wrap older"></span>
+  
+</nav>
+
+
+  
+</article>
+
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>No pains, no gains.</p>
+
+
+      </div>
+    </footer>
+
+      
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>
