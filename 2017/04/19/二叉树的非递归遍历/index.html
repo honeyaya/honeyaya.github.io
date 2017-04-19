@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/19/二叉树的非递归遍历/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="2017年tecent暑期实习生的面试，报的基础研究部，莫名的安排到了腾讯地图的面试，中间的故事估计只有hr清楚吧 由于是第一面，面试官主要是围绕简历上的项目展开，或者说是跟他们做的东西有一定的契合度  GBDT和决策树以及LR的比较，这个真心得自己实现下，虽然做项目时候，都是直接调用的  面试官提到假如给你训练集不是很大的数据需要人工来完成标注，分的类大约有两百多类，大多数是地名而且是真实的？">
-<meta property="og:updated_time" content="2017-04-19T01:36:37.117Z">
+<meta property="og:updated_time" content="2017-04-19T03:10:06.299Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二叉树的非递归遍历">
 <meta name="twitter:description" content="2017年tecent暑期实习生的面试，报的基础研究部，莫名的安排到了腾讯地图的面试，中间的故事估计只有hr清楚吧 由于是第一面，面试官主要是围绕简历上的项目展开，或者说是跟他们做的东西有一定的契合度  GBDT和决策树以及LR的比较，这个真心得自己实现下，虽然做项目时候，都是直接调用的  面试官提到假如给你训练集不是很大的数据需要人工来完成标注，分的类大约有两百多类，大多数是地名而且是真实的？">
@@ -46,7 +46,7 @@
   </nav>
   <nav id="sub-nav">
     
-      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS"></a>
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
     
   </nav>
 </header>
@@ -81,7 +81,8 @@
 <p>不过面试官并没有给反馈，不知道这个答案怎么样</p>
 </li>
 <li><p>二叉树的非递归遍历</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">中序遍历递归：</div><div class="line">void InOrder(TreeNode *root)&#123;</div><div class="line">	if(root != NULL)&#123;</div><div class="line">		InOrder(root-&gt;left);</div><div class="line">		cout &lt;&lt; root-&gt;val &lt;&lt; endl;</div><div class="line">		InOrder(root-&gt;right);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">中序遍历递归：</div><div class="line">void InOrder(TreeNode *root)&#123;</div><div class="line">	if(root != NULL)&#123;</div><div class="line">		InOrder(root-&gt;left);</div><div class="line">		cout &lt;&lt; root-&gt;val &lt;&lt; endl;</div><div class="line">		InOrder(root-&gt;right);</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>​        </p>
