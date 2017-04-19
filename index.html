@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8">
   
@@ -15,73 +15,795 @@
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.png">
   
-  <link rel="stylesheet" href="/css/typing.css">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
+<body>
+  <div id="container">
+    <div id="wrap">
+      
+      <div class="outer">
+        <section id="main">
   
+    <article id="post-二叉树的非递归遍历" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/19/二叉树的非递归遍历/" class="article-date">
+  <time datetime="2017-04-19T01:03:35.000Z" itemprop="datePublished">2017-04-19</time>
+</a>
     
-    <body class="home-body">
-    
-  
-
-      <div id="container" class="container">
-        <div class="home">
-  <div class="content">
-    <div class="profile">
-      <h1 class="nickname">SmileCrazy</h1>
-      <div class="description">
-        <p><p>Don’t cry because it is over, smile because it happened.</p>
-</p>
-      </div>
-    </div>
-    <hr/>
-    <ul class="links">
-      
-        <li>
-          <a href="/archives">Blog</a>
-        </li>
-      
-        <li>
-          <a href="https://github.com/">GitHub</a>
-        </li>
-      
-        <li>
-          <a href="http://douban.com">DouBan</a>
-        </li>
-      
-    </ul>
   </div>
-</div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/19/二叉树的非递归遍历/">二叉树的非递归遍历</a>
+    </h1>
+  
 
-      </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
       
-  <footer id="footer" class="home-footer footer">
-    <div id="copyright" class="copyright">
-      &copy; 2017 John Doe  Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme &copy; <a href="https://github.com/geekplux" target="_blank">GeekPlux</a>
+        <p>2017年tecent暑期实习生的面试，报的基础研究部，莫名的安排到了腾讯地图的面试，中间的故事估计只有hr清楚吧</p>
+<p>由于是第一面，面试官主要是围绕简历上的项目展开，或者说是跟他们做的东西有一定的契合度</p>
+<ol>
+<li><p>GBDT和决策树以及LR的比较，这个真心得自己实现下，虽然做项目时候，都是直接调用的</p>
+</li>
+<li><p>面试官提到假如给你训练集不是很大的数据需要人工来完成标注，分的类大约有两百多类，大多数是地名而且是真实的？ ps正好跟做过的项目给的条件对立</p>
+<blockquote>
+<p>给的两个思路：</p>
+<p>​    1.建立一个“白名单”，考虑到是真实数据，维护一个小型的数据库，可以减小人工工作量，更多的是基于规则的一种办法，这种的好处在于准确率比较高，但是鲁棒性不是很强</p>
+<p>​    2.对训练数据进行聚类，无监督的学习方法，看聚出来的效果</p>
+</blockquote>
+<p>不过面试官并没有给反馈，不知道这个答案怎么样</p>
+</li>
+<li><p>二叉树的非递归遍历</p>
+<p>​</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">中序遍历递归：</div><div class="line">void InOrder(TreeNode *root)&#123;</div><div class="line">	if(root != NULL)&#123;</div><div class="line">		InOrder(root-&gt;left);</div><div class="line">		cout &lt;&lt; root-&gt;val &lt;&lt; endl;</div><div class="line">		InOrder(root-&gt;right);</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>​        </p>
+<pre><code>中序遍历非递归：
+void InOrder(TreeNode *root){
+  if(root == NULL) return ;
+  TreeNode *p = root;
+  stack&lt;TreeNode&gt; st;
 
-      </div>
+  while(p!=NULL || !st.empty()){
+      while(p!=NULL) {
+          st.push(p);
+          p = p -&gt; left;
+      }
+
+      if(!st.empty()){
+          p = st.top();
+          cout &lt;&lt; p -&gt; val &lt;&lt; endl;
+          st.pop();
+          st.push(p-&gt;right); 
+      }
+  }
+}
+</code></pre><p>前序遍历类似的思路</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/19/二叉树的非递归遍历/" data-id="cj1oonfjx000cdoug24wlx8q8" class="article-share-link">Teilen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术面试/">技术面试</a></li></ul>
+
     </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Indeed之去年网测总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/17/Indeed之去年网测总结/" class="article-date">
+  <time datetime="2017-04-17T13:39:59.000Z" itemprop="datePublished">2017-04-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/17/Indeed之去年网测总结/">Indeed之去年网测总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="2016网测第一场"><a href="#2016网测第一场" class="headerlink" title="2016网测第一场"></a>2016网测第一场</h4><ol>
+<li><blockquote>
+<p><strong>Tabereru</strong></p>
+<p>给定一个字符串，遇到’ra’需要删除，但是删除之后，再出现ra不处理</p>
+<p>即如果输入为 rrraaa , 那么输出为 rraa</p>
+<p>字符串很短，随便写写</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">#include &lt;iostream&gt;</div><div class="line">#include &lt;cstring&gt;</div><div class="line"></div><div class="line">using namespace std;</div><div class="line"></div><div class="line">int main()&#123;</div><div class="line">	string str;</div><div class="line">	</div><div class="line">	while(cin &gt;&gt; str) &#123;</div><div class="line">		int len = str.length();</div><div class="line">		if(len &lt; 2) &#123;</div><div class="line">			cout &lt;&lt; str &lt;&lt; endl;</div><div class="line">			continue;</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		string tmp;</div><div class="line">		tmp.clear();</div><div class="line">		for(int i = 0; i &lt; len;)&#123;</div><div class="line">			if((i + 1 &lt; len) &amp;&amp; str[i] == 'r' &amp;&amp; str[i + 1] == 'a')&#123;</div><div class="line">				i += 2;</div><div class="line">			&#125; else&#123;</div><div class="line">				tmp += str[i];</div><div class="line">				i++;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		</div><div class="line">		cout &lt;&lt; tmp &lt;&lt; endl;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><blockquote>
+<p><strong>Matrix Product</strong></p>
+<p>博主讲是裸的算法  O(N^3)</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">#include &lt;iostream&gt;</div><div class="line">using namespace std;</div><div class="line"></div><div class="line">#define maxn 100</div><div class="line">int m1[maxn][maxn];</div><div class="line">int m2[maxn][maxn];</div><div class="line">int ans[maxn][maxn];</div><div class="line"></div><div class="line">int main()&#123;</div><div class="line">	int n,m,k;</div><div class="line">	while(cin &gt;&gt; n &gt;&gt; m &gt;&gt; k)&#123;</div><div class="line">		</div><div class="line">		for(int i = 0; i &lt; n; i++)&#123;</div><div class="line">			for(int j = 0; j &lt; m; j++)&#123;</div><div class="line">				cin &gt;&gt; m1[i][j] ;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		for(int i = 0; i &lt; m; i++)&#123;</div><div class="line">			for(int j = 0; j &lt; k; j++)&#123;</div><div class="line">				cin &gt;&gt; m2[i][j] ;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		for(int index1 = 0; index1 &lt; n; index1++)&#123;</div><div class="line">			for(int index2 = 0; index2 &lt; k; index2++)&#123;</div><div class="line">				int sum = 0;</div><div class="line">				</div><div class="line">				for(int index3 = 0; index3 &lt; m; index3++)&#123;</div><div class="line">					sum += m1[index1][index3] * m2[index3][index2];</div><div class="line">				&#125;</div><div class="line">				</div><div class="line">				ans[index1][index2] = sum;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		for(int i = 0; i &lt; n; i++)&#123;</div><div class="line">			for(int j = 0; j &lt; k; j++)&#123;</div><div class="line">				cout &lt;&lt; ans[i][j] &lt;&lt; " ";</div><div class="line">			&#125;</div><div class="line">			cout &lt;&lt; endl;</div><div class="line">		&#125;		</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Ancient Formula</strong></p>
+</li>
+</ol>
+<blockquote>
+<p>给定不超过6个数，其中有5个空位可以添加加号+或者乘号<em>，求值的时候不考虑优先级，即2+3</em>4=20。再给定一个整数k，问这6个数的某种排列以及某种加符号方式下，与k的差的绝对值的最小值(即与k的接近程度)。</p>
+</blockquote>
 
       
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/17/Indeed之去年网测总结/" data-id="cj1oonfj40003dougx9pb4q2b" class="article-share-link">Teilen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试总结/">面试总结</a></li></ul>
 
-<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-百望山" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/14/百望山/" class="article-date">
+  <time datetime="2017-04-14T15:39:49.000Z" itemprop="datePublished">2017-04-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/14/百望山/">百望山</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>14/04/17的北京天气不错，就打算去百望山</p>
+<p>简单的查了下攻略，说是百望山是因为佘老太君曾望子归来的地方，不过看到说氧负离子很多，想想可以呼吸一口，沁人心脾的那种醉~</p>
+<p>9点出的门，也就两站，近的简直了</p>
+<p>好久不坐地铁，表示不太习惯</p>
+<p>从小路上山，感觉有点老了，15年爬香山的时候，还很壮年呢</p>
+<p>每到一个拐点，都能看到北边的北京城，可惜，不知道是雾还是霾，就是佘老太君的视觉，也是朦朦胧胧的，但看的真切的是一片片的房子，密密麻麻的，这些可都是那些人手里的资源或者说是白花花的银子吖，16号地铁线的开通，感觉这片地方的房价妥妥的涨了，房子的升值空间远高于一个人的升值空间，可笑嘛？然而现状就是酱紫的，也许十年之后，如果不前进，那就是可悲吧。</p>
+<p>山顶一吼真心有种换血的感觉</p>
+<p>下山的路上一首《沁园春》，想想也是有意思，家里的那副沁园春看了二十多年，愣是沾满了灰都没看出味道，哪怕是学校里拿起书本来，也只是觉得朗朗上口，仅此而已，然而今天，就那么一瞬，我觉得不愧是主席，舍我其谁的霸气一览无余，有的时候在想，我们这一代人生活的太顺利，太多的遮护就像赢稷一样</p>
+<p>这学期坚持听各种讲座，看的书籍在增多，慢慢的有了一些联想与联系，所以，牛吃草反刍是有道理的</p>
+<p>最后的最后，有幸看到撒了一地的桃花，不曾见到那漫山遍野的旺盛有点可惜，秋天再来吧，望那一山的红叶能等到我                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </p>
+<p>​                </p>
+<p>​         </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/14/百望山/" data-id="cj1oonflq0016doug0euukfnp" class="article-share-link">Teilen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/游记/">游记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-C++之STL" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/13/C++之STL/" class="article-date">
+  <time datetime="2017-04-13T02:12:53.000Z" itemprop="datePublished">2017-04-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/13/C++之STL/">c++ STL</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>STL</p>
+<h5 id="String"><a href="#String" class="headerlink" title="String"></a>String</h5><p><img src="C:\Users\smilecrazy\Desktop\捕获3.PNG" alt="捕获"></p>
+<p>string 类是一个模板类，用意字符串操作</p>
+<p>1.构造赋值</p>
+<blockquote>
+<p><code>string s1 = &quot;hello&quot;</code></p>
+<p><code>string s2(&quot;hello&quot;)</code></p>
+<p><code>string s2 = s1</code></p>
+<p><code>s4.assign(s2)</code></p>
+</blockquote>
+<p>2.字符访问</p>
+<blockquote>
+<p>1.[]   <code>s[0]</code></p>
+<p>2.at(int) <code>s.at(2)</code>  有范围检查，超过范围，out of range 异常</p>
+<p>3.substr(int,int)  <code>s2=s1.substr(4,5)</code> 从s1的下标4开始取5个字符</p>
+<p>4.c_str()返回const char * 类型的字符串</p>
+</blockquote>
+<p>3.容量</p>
+<blockquote>
+<ol>
+<li><p>length() , size() </p>
+</li>
+<li><p>empty()</p>
+</li>
+<li><p>string对象的大小不需要某个特殊字符作为结束符，可以用成员属性</p>
+<p>来保存当前对象的大小</p>
+</li>
+</ol>
+</blockquote>
+<p>4.搜索</p>
+<blockquote>
+<p>1.<code>int p = str.find(&quot;CG&quot;,2)</code> // 从位置2开始查找”CG”,第一次出现的位置</p>
+<p>2.rfind() 从后给前找</p>
+</blockquote>
+<p>5.比较</p>
+<blockquote>
+<p>1.<code>s1.compare(s0)</code>  </p>
+<p>2.使用关系运算符 operator== &gt; ,&gt;=, &lt;, &lt;= ,!=</p>
+</blockquote>
+<p>6.修改器</p>
+<pre><code>1.+ or  += 连接
+
+2.append(string,int,int)  s2.append(s2,5,6)  5是位置，6是长度
+
+3.insert()
+
+4.push_back()/pop_back()
+
+5.replace(int,int,string)  起始位置以及长度改成某字符串 
+</code></pre><p>7.流输入输出</p>
+<blockquote>
+<p>支持 &gt;&gt; or &lt;&lt; </p>
+</blockquote>
+<p>8.类型转换</p>
+<blockquote>
+<p>​    to_string()</p>
+</blockquote>
+<hr>
+<p>c++ 两个方面体现了重用</p>
+<ul>
+<li><p>面向对象的设计思想，继承，多态以及标准类库</p>
+</li>
+<li><p>泛型程序设计，包括模板机制以及标准模板库STL 就是将一些常用的数据结构写成模板</p>
+<p>​</p>
+</li>
+</ul>
+<p>c++ STL 大致由 <strong>容器，迭代器，算法，函数对象</strong>  四个部分组成</p>
+<pre><code>* 容器是可容纳各种数据类型的数据结构
+
+      1.包括**顺序容器**和**关联容器**
+
+      2.还有一类不提供真正的用于存储元素的数据结构实现，称作容器适配器
+
+      3.容器适配器不支持迭代器，由程序员选择合适的底层数据结构
+
+* 迭代器是用于依次存取容器中元素的指示器
+
+      1.实质上是一类泛化了的指针
+
+      2.通过使用迭代器，开发者可以操作数据结构而无需关心其内部实现
+
+* STL还提供了一些常见算法的函数模板，使得算法与数据结构分离
+
+      1.可以对自定义的数据结构使用这些算法
+
+* 函数对象即重载了操作符()的对象
+
+      1.类的实例都可以称作为函数对象
+</code></pre><p><img src="C:\Users\smilecrazy\Desktop\捕获2.PNG" alt="捕获"></p>
+<p><img src="C:\Users\smilecrazy\Desktop\捕获.PNG" alt="捕获"></p>
+<p><img src="C:\Users\smilecrazy\Desktop\捕获4.PNG" alt="捕获4"></p>
+<p><img src="C:\Users\smilecrazy\Desktop\捕获5.PNG" alt="捕获5"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/13/C++之STL/" data-id="cj1oonfik0000doug5zkt3383" class="article-share-link">Teilen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-家族传承" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/12/家族传承/" class="article-date">
+  <time datetime="2017-04-12T10:41:10.000Z" itemprop="datePublished">2017-04-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/12/家族传承/">家族办公室</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>清华大学-高皓博士  </p>
+<p>“企业和家族的发展”</p>
+<p>​    龙湖地产 </p>
+<p>纲要：</p>
+<p>​    1.比尔盖茨的家族办公室</p>
+<p>​        个人财富900亿美元 (2016年8月) </p>
+<p>​        a.中国内部的首富一直发生改变，然，在世界范围内，盖茨如何做到的？</p>
+<p>​        b.除了捐赠于基金，剩下的如何理财？</p>
+<p>​                盖茨现持有微软110亿美元</p>
+<p>​                盖茨的聚会上要求大家穿粉色的衣服   原因：<strong>Michael Larson</strong>(盖茨家族办公室ceo)</p>
+<p>​                1986 微软占比45% 129亿   到2016年占比2% 900亿</p>
+<p>​                呈线性递减</p>
+<p>​                盖茨的另外的财富：股权投资组合  房地产投资组合 </p>
+<p>​                    eg:哈佛大学核心位置的查尔斯酒店，四季酒店，农田，牧场</p>
+<p>​                盖茨的财富管理体系：  三个管理主体：基金会，信托基金，<strong>瀑布投资</strong></p>
+<p>​                                   管理资本：产业资本，社会资本，金融资本</p>
+<p>​    2.家族办公司的背景</p>
+<pre><code>恒大的许家印？？  销售额3700亿人民币  负债11000亿rmb
+</code></pre><p>​        2013年中国家族办公室的元年</p>
+<p>​        <strong>蔡崇信</strong>  职业起始律师，  瑞典最富有家族瓦瑞达？？做家族投资  </p>
+<p>​        小扎：一年的安保500w美元   把家庭周围的房子买之后再出租出去</p>
+<pre><code>**Divesh&apos;s Darlings**   硅谷基金管理 
+</code></pre><p>​                                              <strong>李健熙？？</strong>  李在容 三星第三代继承人    三星秘书室  </p>
+<p>​        家族办公室社会背景：</p>
+<p>​            1%拥有50.8%的家庭财富   <strong>wealthx.com</strong></p>
+<p>​            家族企业出现问题，替代办法？[长江学院] – 遗传税，金融危机 ，影响因素很多</p>
+<p>​                无法传承，考虑卖掉，转化为的财富管理              </p>
+<p>​             定义：对超高净值家族一张完整资产负债表进行全面管理和治理的机构</p>
+<p>​            功能：金融资本，家族资本，人力资本，社会资本</p>
+<p>​            出现的驱动力：1.家族财富和企业财富的分离，证券的出现</p>
+<p>​                马化腾为什么不断的卖股票，即使每次卖都会涨？ – 真金不在纸上</p>
+<p>​                    腾讯的股票的血泪史：<strong>李泽楷？？</strong></p>
+<p>​                <strong>长期利润：垄断</strong></p>
+<p>​                        2.</p>
+<p>​                        3.家族财富的传承</p>
+<p>​            出现的原因：</p>
+<p>​                        1.激励不相容– 客户，银行，从业人员  冲突严重   opm: other people money</p>
+<p>​                            B.B.King: fool me once, shame on you; fool me twice,shame on me.</p>
+<p>​                        2.信息不对称</p>
+<p>​                        3.责任不对等</p>
+<p>​            SFO: single family office</p>
+<p>​            MFO: Multi family office        </p>
+<p>3.设计家族办公室：战略定位与治理结构</p>
+<p>​    先定位—&gt;  治理(八大模式) </p>
+<p>4.案例：贝西墨信托  smo转型为mfo</p>
+<p>​    评价指数：管理规模        </p>
+<p>​    亨利.菲普斯</p>
+<p>​                    </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/12/家族传承/" data-id="cj1oonfl8000vdoug71xp9x7y" class="article-share-link">Teilen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/经济/">经济</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Thinking-in-c" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/12/Thinking-in-c/" class="article-date">
+  <time datetime="2017-04-12T05:55:08.000Z" itemprop="datePublished">2017-04-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/12/Thinking-in-c/">Thinking in c++</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>3月20号到4月5号，稀稀疏疏的写了两个星期的华为2017精英挑战赛的代码，是一个网络中的经典选址问题，这里不做过多的描述，强撸了七八百行代码，这个算是为数不多自己写完的，一直不太知道怎么开始写，然后硬着头皮开始这个事情，居然还是把答案写出来了，不过优化真心做的不够好</p>
+<p>这里也就发现一个很大的问题，既有的逻辑中，主要还是面向过程的思维，整个的代码基本上是一个点一个点的解决，这样子造成了代码的不流畅性，于是在这一个星期，找到了浙大翁老师的c++的课程，把面向对象的三大特点以及虚构析构又学习了一遍，温故知新，我想说的就是这个道理。</p>
+<p>另外，这本《Thinkging in c++》看豆瓣评分还不错，希望这本书能帮助我解决一些问题，当然这里会持续不停更新这本书的收获：</p>
+<h5 id="第一章-Introduction-to-objects"><a href="#第一章-Introduction-to-objects" class="headerlink" title="第一章　Introduction　to　objects"></a>第一章　Introduction　to　objects</h5><p>1.bicycles for the mind as Steve Jobs is fond of saying</p>
+<p>Q1: Why objects are important and how to design with them?</p>
+<p>2.你解决问题的复杂度依赖于你对问题的抽象</p>
+<pre><code>The programmer must establish the association 
+between the machine model
+(in the “solution space,” which is the place where you’re modeling that problem, such as a computer) 
+and the model of the problem that is actually being solved 
+(in the “problem space,” which is the place where the problem exists)
+</code></pre><blockquote>
+<p>oop的思想： 从问题空间抽象</p>
+<p>The object-oriented approach goes a step farther by providing tools for the programmer to represent elements in the problem space. This representation is general enough that the programmer is not constrained to any particular type of problem.</p>
+<p>将 problem space中的elements 称之为 “objects” </p>
+<p>通过这种描述，你可以在解决问题的时候，你也可以了解问题本身</p>
+<p>Each object looks quite a bit like a little computer; it has a state, and it has operations that you can as<br>it to perform. However, this doesn’t seem like such a bad analogy to objects in the real world; they all have characteristics and behaviors.</p>
+</blockquote>
+<p>3.Alan Kay 总结的五条基本规则：</p>
+<p>​    a. Everything is an object.which can stores data and asking it to perform operations on itself.</p>
+<p>​    b. A program is a bunch of objects telling each other what to do by sending messages.</p>
+<p>​    c.Each object has its own memory made up of other objects. you create a new kind of object by making a package containing existing objects.</p>
+<p>​    d.Every objects has a type. That’s to say , the class , in which “class” is synonymous with “type”.</p>
+<p>​    e.All objects of a particular type can receive the same messages.</p>
+<ol>
+<li><blockquote>
+<p>first, creating abstract data types(classes) is a fundamental concept</p>
+<p>second, create variables of a type (objects or instances) and manipulate those varibles(calles sending messages or requests)</p>
+<p>third,the members of each class share come commonality:</p>
+<p>foruth, each member has its own state </p>
+</blockquote>
+</li>
+<li><p>oop能把问题的规模减小？ 这个有待验证</p>
+</li>
+<li><p>这个map的关系没太明白 </p>
+<blockquote>
+<p>Indeed, one of the challenges of object-oriented programming is to<br>create a one-to-one mapping between the elements in the problem<br>space and objects in the solution space</p>
+</blockquote>
+</li>
+<li><p>Interface establishes what requests you can make for a particular objects. </p>
+<p><img src="C:\Users\smilecrazy\Desktop\捕获.PNG" alt="捕获">​</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/12/Thinking-in-c/" data-id="cj1oonfj70004dougtjogb5wf" class="article-share-link">Teilen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/书籍/">书籍</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-基础研究" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/11/基础研究/" class="article-date">
+  <time datetime="2017-04-11T15:20:33.000Z" itemprop="datePublished">2017-04-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/11/基础研究/">基础研究</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这是人工智能讲座带给我的思考，之后找个时间再好好总结下</p>
+<blockquote>
+<p>最近听到地平线ceo余凯提到人工智能的思考，听到有人说40min并没有听到太多干货，其实不是的，今天听完创新企业的创新管理这课突然有点开朗了，似乎看到一点点的共性其实之前的时候无论人工智能被讲的多火，可惜我个人总觉得在国内很难抓到这个机会，不仅仅是本身的技术的限制，更觉得是bat的大公司的垄断但是最近听下来，突然有点觉得之前的想法有问题类从bat看来，他们最开始的融资也就几千万吧，然后垄断了人们的生活，甚至改变人们的习惯，然而这些都是developed的部门，我们运用西方的基础研究，这么看，国内的这些创新更多的是在商业模式的创新，并不是最新的idea的作用不过在网络笼罩的年代里，尤其是人工智能的今天，更重要的是人工智能的也许会普及人类生活的方方面面的时候，bat并不是全能的，所以在更多人的人看来，这就是个机会，然而如果我没有想办法把握住，细想来，就跟三十年前，老爸没有把握住机会是一样的，所以如果只能单纯的满足找个工作，那也就有被机器取代的一天，也许被别人取代的那一天就是我下岗的那一天所以无数的人看来，这是个机会，只是这个机会要如何把握住？</p>
+<p>steveJobs的传记我需要好好揣摩学习下，这个被称为一代标记的人物没有人能揣摩出他走过的路，更不能执果说因，事后诸葛切莫为之25岁的乔布斯已经身价1千万，而我现在还在不断的摸索，有的是生命和时间不知道生命这场赌还赌得起不？</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/11/基础研究/" data-id="cj1oonfkw000qdougwiyh6xi9" class="article-share-link">Teilen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-奥林匹克相聚" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/11/奥林匹克相聚/" class="article-date">
+  <time datetime="2017-04-11T15:17:55.000Z" itemprop="datePublished">2017-04-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/11/奥林匹克相聚/">奥林匹克相聚</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>只半年，却觉得物是人非</p>
+<blockquote>
+<p>昨天GF来北京面试，许是最近发生了很多事情，聊的还是蛮开森的</p>
+<p>不知不觉，从高中那会子毕业到现在也五六个年头了，最后一个镜头还是高考前一天晚上，他，我还有ZX在那棵大树下聊天，说一些有的没的，那时候的心境就是尴尬的想抓紧逃离</p>
+<p>一见面就看到GF居然有白发了，年纪轻轻的，突然有了一些沧桑感，也不知道经历了什么，不过聊起来他的征友启事，气氛也就活跃起来了，还有CC &amp;&amp; JZ的天津和新乡的故事，曾经觉得CC很近，可似乎有点远离对方生活的赶脚，下次也许就是他们结婚的时候了吧</p>
+<p>后来逛了下奥林匹克公园，要给他拍张蹦起来的照片，终是照相师技术不到位，没拍出来，不过这中间倒是多了不少欢乐，GF比以前也更会照顾人了，进步不少不知道高考的时候有没有受他的影响，也懒得再去细想当时的情景，想想，也是很感谢当时的自己，并没有选择跟他在一起，也才有了今日这么逗比的相聚</p>
+<p>我想，不管对谁，都是好处，这些年，做出来的傻事不止一两件，想着跟别人那里取暖，最sb的做法，结果很多东西都变了味道十月份回家参加的WZG的婚礼，今天就看到了他家的小公举，想想那些年的少年，转眼也都到了奶爸的年纪，真是6的飞起</p>
+<p>生活真是一场马拉松，几年的时间，每个人都在飞速的变化着，虽然每天似乎总是上一天的复制经历着别人的变化，过程自是蛮多心酸，不经意就会想起自己，莫名的就会心慌慌，有的时候就会怀疑到底飘在这座城市的意义，</p>
+<p>晚上跟老妈聊起来，显然，老妈以为我是想找对象结婚了，但是，随着这些年的历史，慢慢的，身边的这些人就会成为这个社会的接班人去磨练生活，就会觉得自己成长的很慢，很多时候，没有自己的想法，单工作的事情就还没确定不过，我想，生活都会安排的，独立是我生活的一部分，为了这个目标，当前的所有事情都要学着接受和学习，老弟慢慢的在城市里面安家，我也觉得轻松了不少，抓紧把自己的窟窿都还干净，想办法出国，就是我当前的目标因为我还想飞</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/11/奥林匹克相聚/" data-id="cj1oonfl3000tdougj1iim7y1" class="article-share-link">Teilen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活经历/">生活经历</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-小聚" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/11/小聚/" class="article-date">
+  <time datetime="2017-04-11T15:17:28.000Z" itemprop="datePublished">2017-04-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/11/小聚/">小聚</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>嗯，貌似是2017年1月15号的事情</p>
+<blockquote>
+<p> 17年16号的时候飘来了一场雪，不再是在朋友圈看到“雪”</p>
+<p>昨天参加实习的公司猿题库年会，整个还是很开森的，抽到了一直心心念念的电动牙刷，虽然也悄悄的yy个是不是可以抽到手机，嘿嘿，不过想想也是很美的嘛之前看到小秋经常喝红酒，也听到过小秋给我讲红酒的味道，看她每天晕晕的睡觉，昨天在小灰灰的鼓励下，喝了几口，入口即化的甜味终究抵不过大部分的苦味，只是细细品尝下来的酸味似乎可以稍微掩饰下苦味，hhh，再不是小时候拿着葡萄瓶满嘴的兑着水的稀释的味道</p>
+<p>也许这就是成长吧</p>
+<p>下午的时候跟LXF, XS难得的聚聚，得亏了XS大早上的电话，我不知道几年不见的时光里，每个人到底都经历了什么，或多或少的不参与到对方的生活，总觉得再见似乎有点虚虚的，也许正是这样，身边换了一波又一波，XS还是一如既往的沉默＋微笑，他在那里，总有一种大智慧的赶脚，不骄不躁，不慌不忙的就那么走着，像大海一样，宠辱不惊，一直戏称他在远方修炼，偶尔来人间食味烟火，给我们带来点仙气；XF呢，也许跟自己跟接近点吧，对着生活林林种种的欲望和奋斗，其实，无非是穷怕了，我们的不富有，我们在这个社会的立足感那么弱，刚刚从学校离开，还不懂得这个社会的法则，我们的如履薄冰却还是让我们觉得那么的不安全，我自己更是这样，有的时候怂的更不敢去面对一份感情以后不管怎样，希望生活不会让我们断了联系毕竟新的一年，也希望大家都越来越好</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/11/小聚/" data-id="cj1oonflc000xdougvn5hqn3y" class="article-share-link">Teilen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活经历/">生活经历</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-贴标签" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/11/贴标签/" class="article-date">
+  <time datetime="2017-04-11T15:16:28.000Z" itemprop="datePublished">2017-04-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/11/贴标签/">贴标签</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这个不知道写与什么时候的感受,现在也还是会这么想，不过不会那么悲观了</p>
+<blockquote>
+<p>有朋友问我，目标是什么</p>
+<p>想起很久之前看到的</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1113406-565d3da8613be9f5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<p>当时看到这几点的时候，我在想，条件这么好的菇凉干嘛要找你那时候是2015年8月，我刚来北京<br>16年的时候，遇到一个在二线城市投资据说回报比1:1w的大牛，在聊天的过程中，对方询问我们几个的家庭背景，除了点点的不舒服之外，并没有想到别的，也许那个时候对人进行量化的种子已经埋下来了<br>再后来，ex跟我分的原因之一提到我的家庭，到现在再没有找对象的冲动了，会顾及很多，朋友说，人家不过是找了个让你无法反驳的理由，何必跟自己这么较劲呢，是呀，何必呢，可有些东西<br>大多数的时间我在实习，或多或少的听同事们聊起了很多事情，跟以往在学校里不一样的东西，大家根本不会像在学校那样单纯的因为你考试分数高就似乎很优秀，有了更多的标准，也给你贴上了各种各样的标签<br>从火遍大江南北的《我奋斗了十八年才和你坐在一起喝咖啡》到现在清醒的意识到这个社会的阶级固化越来越严重，社会资源注定的太多，毕竟这是人家的上一代人甚至上几代人拼下来的结果<br>虽然我都相信一个人努力的价值，于我，这也是唯一改变的方法，很幸运的这么些年来老友一直鼓励我，照顾我，但是这个社会就是这样呀，我能接受不也是因为自己理解这种想法嘛，只是我不希望陷入这样的套路，别瞎扯淡，干就对了，若干年后，如果可能，我希望我在乎的人不会像曾经的我一样被人笑话，放弃一个个机会<br>生活还在，就要学着美美哒<br>就酱</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/11/贴标签/" data-id="cj1oonfm2001ddougtiex7kb9" class="article-share-link">Teilen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活经历/">生活经历</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">weiter &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/书籍/">书籍</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习资源/">学习资源</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术面试/">技术面试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游记/">游记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活经历/">生活经历</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/经济/">经济</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试总结/">面试总结</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/书籍/" style="font-size: 16.67px;">书籍</a> <a href="/tags/学习资源/" style="font-size: 10px;">学习资源</a> <a href="/tags/技术/" style="font-size: 13.33px;">技术</a> <a href="/tags/技术面试/" style="font-size: 10px;">技术面试</a> <a href="/tags/游记/" style="font-size: 10px;">游记</a> <a href="/tags/生活经历/" style="font-size: 20px;">生活经历</a> <a href="/tags/经济/" style="font-size: 10px;">经济</a> <a href="/tags/面试总结/" style="font-size: 10px;">面试总结</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/19/二叉树的非递归遍历/">二叉树的非递归遍历</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/17/Indeed之去年网测总结/">Indeed之去年网测总结</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/14/百望山/">百望山</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/13/C++之STL/">c++ STL</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/12/家族传承/">家族办公室</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
   <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/typing.js"></script>
-<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+<script src="/js/script.js"></script>
 
 
 
 
-
-
-
-    </div>
-  </body>
+  </div>
+</body>
 </html>
