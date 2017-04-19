@@ -83,9 +83,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>匹配包含 . 和 <em>  的正则表达式， . 可以表示任意一个字符， </em>  表示它前面的字符可以出现任意次(含0次)，例如 字符串aaa和 模式a.a  和 ab<em> ac </em> a 匹配，但和 aa.a  以及 ab* a均不匹配</p>
-</blockquote>
+        <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">匹配包含 . 和 *  的正则表达式， . 可以表示任意一个字符， *  表示它前面的字符可以出现任意次(含0次)，例如 字符串aaa和 模式a.a  和 ab * ac * a 匹配，但和 aa.a  以及 ab * a均不匹配</div></pre></td></tr></table></figure>
 <p>思路分析：每次从字符串中拿出一个字符和模式中的字符匹配，如果模式中的字符ch是.  那么可以完成匹配，如果ch不是.并且字符串中的字符也是ch,也是相互匹配的，当两者匹配时，接着匹配后面的字符。</p>
 <p>当模式中的第二个字符不是*，如果字符串中的第一个字符和模式中的第一个字符匹配，那么字符串和模式均向后移动一个字符，然后继续匹配，如果字符串中的第一个字符和模式中的第一个字符不相匹配，则直接返回false</p>
 <p>当模式中的第二个字符是 <em>的时候，此时可能有多种匹配方式，一种是直接在模式上向后移动两个字符，相当与 </em> 和前面的字符被忽略， * 可以匹配0个字符。如果模式中的第一个字符和字符串中的第一个字符相匹配，则在字符串向后移动一个字符，模式串有两个选择： 可以向后移动两个，也可以保持不变。</p>
@@ -95,7 +93,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://99hi.vip/2017/04/19/正则表达式匹配/" data-id="cj1oyppxt00145sugzkvghv3r" class="article-share-link">Partager</a>
+      <a data-url="http://99hi.vip/2017/04/19/正则表达式匹配/" data-id="cj1p03p050013loug4cu2lxpf" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试总结/">面试总结</a></li></ul>
@@ -135,11 +133,8 @@
 <li><p>GBDT和决策树以及LR的比较，这个真心得自己实现下，虽然做项目时候，都是直接调用的</p>
 </li>
 <li><p>面试官提到假如给你训练集不是很大的数据需要人工来完成标注，分的类大约有两百多类，大多数是地名而且是真实的？ ps正好跟做过的项目给的条件对立</p>
-<blockquote>
-<p>给的两个思路：</p>
-<p>​    1.建立一个“白名单”，考虑到是真实数据，维护一个小型的数据库，可以减小人工工作量，更多的是基于规则的一种办法，这种的好处在于准确率比较高，但是鲁棒性不是很强</p>
-<p>​    2.对训练数据进行聚类，无监督的学习方法，看聚出来的效果</p>
-</blockquote>
+<p>​    </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">给的两个思路：</div><div class="line">	1.建立一个“白名单”，考虑到是真实数据，维护一个小型的数据库，可以减小人工工作量，更多的是基于规则的一种办法，这种的好处在于准确率比较高，但是鲁棒性不是很强</div><div class="line"></div><div class="line">	2.对训练数据进行聚类，无监督的学习方法，看聚出来的效果</div></pre></td></tr></table></figure>
 <p>不过面试官并没有给反馈，不知道这个答案怎么样</p>
 </li>
 <li><p>二叉树的非递归遍历</p>
@@ -171,7 +166,7 @@ void InOrder(TreeNode *root){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://99hi.vip/2017/04/19/二叉树的非递归遍历/" data-id="cj1oyppvw00095sughwnjmzkk" class="article-share-link">Partager</a>
+      <a data-url="http://99hi.vip/2017/04/19/二叉树的非递归遍历/" data-id="cj1p03oyi0008lougsh0j7qrj" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试总结/">面试总结</a></li></ul>
@@ -231,7 +226,7 @@ void InOrder(TreeNode *root){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://99hi.vip/2017/04/17/Indeed之去年网测总结/" data-id="cj1oyppve00035sug4ndmn6d1" class="article-share-link">Partager</a>
+      <a data-url="http://99hi.vip/2017/04/17/Indeed之去年网测总结/" data-id="cj1p03oxr0001loug0hgsodqd" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试总结/">面试总结</a></li></ul>
@@ -281,7 +276,7 @@ void InOrder(TreeNode *root){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://99hi.vip/2017/04/14/百望山/" data-id="cj1oyppy000185sugmb62ye5h" class="article-share-link">Partager</a>
+      <a data-url="http://99hi.vip/2017/04/14/百望山/" data-id="cj1p03p0j001clougw5nxynof" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/游记/">游记</a></li></ul>
@@ -316,62 +311,28 @@ void InOrder(TreeNode *root){
     <div class="article-entry" itemprop="articleBody">
       
         <p>STL</p>
-<h5 id="String"><a href="#String" class="headerlink" title="String"></a>String</h5><p><img src="C:\Users\smilecrazy\Desktop\捕获3.PNG" alt="捕获"></p>
+<h5 id="String"><a href="#String" class="headerlink" title="String"></a>String</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/image/string</div></pre></td></tr></table></figure>
 <p>string 类是一个模板类，用意字符串操作</p>
 <p>1.构造赋值</p>
-<blockquote>
-<p><code>string s1 = &quot;hello&quot;</code></p>
-<p><code>string s2(&quot;hello&quot;)</code></p>
-<p><code>string s2 = s1</code></p>
-<p><code>s4.assign(s2)</code></p>
-</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">string s1 = "hello"</div><div class="line"></div><div class="line">string s2("hello")</div><div class="line"></div><div class="line">string s2 = s1</div><div class="line"></div><div class="line">s4.assign(s2)</div></pre></td></tr></table></figure>
 <p>2.字符访问</p>
-<blockquote>
-<p>1.[]   <code>s[0]</code></p>
-<p>2.at(int) <code>s.at(2)</code>  有范围检查，超过范围，out of range 异常</p>
-<p>3.substr(int,int)  <code>s2=s1.substr(4,5)</code> 从s1的下标4开始取5个字符</p>
-<p>4.c_str()返回const char * 类型的字符串</p>
-</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">1.[]   s[0]</div><div class="line"></div><div class="line">2.at(int) s.at(2)  有范围检查，超过范围，out of range 异常</div><div class="line"></div><div class="line">3.substr(int,int)  s2=s1.substr(4,5) 从s1的下标4开始取5个字符</div><div class="line"></div><div class="line">4.c_str()返回const char * 类型的字符串</div></pre></td></tr></table></figure>
 <p>3.容量</p>
-<blockquote>
-<ol>
-<li><p>length() , size() </p>
-</li>
-<li><p>empty()</p>
-</li>
-<li><p>string对象的大小不需要某个特殊字符作为结束符，可以用成员属性</p>
-<p>来保存当前对象的大小</p>
-</li>
-</ol>
-</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1. length() , size() </div><div class="line">2. empty()</div><div class="line">3. string对象的大小不需要某个特殊字符作为结束符，可以用成员属性</div><div class="line">   来保存当前对象的大小</div></pre></td></tr></table></figure>
 <p>4.搜索</p>
-<blockquote>
-<p>1.<code>int p = str.find(&quot;CG&quot;,2)</code> // 从位置2开始查找”CG”,第一次出现的位置</p>
-<p>2.rfind() 从后给前找</p>
-</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1.int p = str.find("CG",2) // 从位置2开始查找"CG",第一次出现的位置</div><div class="line"></div><div class="line">2.rfind() 从后给前找</div></pre></td></tr></table></figure>
 <p>5.比较</p>
-<blockquote>
-<p>1.<code>s1.compare(s0)</code>  </p>
-<p>2.使用关系运算符 operator== &gt; ,&gt;=, &lt;, &lt;= ,!=</p>
-</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1.s1.compare(s0)  </div><div class="line"></div><div class="line">2.使用关系运算符 operator== &gt; ,&gt;=, &lt;, &lt;= ,!=</div></pre></td></tr></table></figure>
 <p>6.修改器</p>
 <pre><code>1.+ or  += 连接
-
 2.append(string,int,int)  s2.append(s2,5,6)  5是位置，6是长度
-
 3.insert()
-
 4.push_back()/pop_back()
-
 5.replace(int,int,string)  起始位置以及长度改成某字符串 
 </code></pre><p>7.流输入输出</p>
-<blockquote>
-<p>支持 &gt;&gt; or &lt;&lt; </p>
-</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">支持 &gt;&gt; or &lt;&lt;</div></pre></td></tr></table></figure>
 <p>8.类型转换</p>
-<blockquote>
-<p>​    to_string()</p>
-</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">to_string()</div></pre></td></tr></table></figure>
 <hr>
 <p>c++ 两个方面体现了重用</p>
 <ul>
@@ -383,35 +344,28 @@ void InOrder(TreeNode *root){
 </ul>
 <p>c++ STL 大致由 <strong>容器，迭代器，算法，函数对象</strong>  四个部分组成</p>
 <pre><code>* 容器是可容纳各种数据类型的数据结构
-
-      1.包括**顺序容器**和**关联容器**
-
-      2.还有一类不提供真正的用于存储元素的数据结构实现，称作容器适配器
-
-      3.容器适配器不支持迭代器，由程序员选择合适的底层数据结构
+    1.包括**顺序容器**和**关联容器**
+    2.还有一类不提供真正的用于存储元素的数据结构实现，称作容器适配器
+    3.容器适配器不支持迭代器，由程序员选择合适的底层数据结构                  
 
 * 迭代器是用于依次存取容器中元素的指示器
-
-      1.实质上是一类泛化了的指针
-
-      2.通过使用迭代器，开发者可以操作数据结构而无需关心其内部实现
+    1.实质上是一类泛化了的指针
+    2.通过使用迭代器，开发者可以操作数据结构而无需关心其内部实现      
 
 * STL还提供了一些常见算法的函数模板，使得算法与数据结构分离
-
-      1.可以对自定义的数据结构使用这些算法
+    1.可以对自定义的数据结构使用这些算法
 
 * 函数对象即重载了操作符()的对象
-
-      1.类的实例都可以称作为函数对象
-</code></pre><p><img src="C:\Users\smilecrazy\Desktop\捕获2.PNG" alt="捕获"></p>
-<p><img src="C:\Users\smilecrazy\Desktop\捕获.PNG" alt="捕获"></p>
-<p><img src="C:\Users\smilecrazy\Desktop\捕获4.PNG" alt="捕获4"></p>
-<p><img src="C:\Users\smilecrazy\Desktop\捕获5.PNG" alt="捕获5"></p>
+    1.类的实例都可以称作为函数对象
+</code></pre><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/image/rongqi</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/image/orderRongqi</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/image/guanRongqi</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/image/adaptor</div></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://99hi.vip/2017/04/13/C++之STL/" data-id="cj1oyppv400015sug6sddckr9" class="article-share-link">Partager</a>
+      <a data-url="http://99hi.vip/2017/04/13/C++之STL/" data-id="cj1p03oy20003lougc68sbc1j" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
@@ -448,8 +402,7 @@ void InOrder(TreeNode *root){
         <p>清华大学-高皓博士  </p>
 <p>“企业和家族的发展”</p>
 <p>​    龙湖地产 </p>
-<p>纲要：</p>
-<p>​    1.比尔盖茨的家族办公室</p>
+<p>​    1..比尔盖茨的家族办公室</p>
 <p>​        个人财富900亿美元 (2016年8月) </p>
 <p>​        a.中国内部的首富一直发生改变，然，在世界范围内，盖茨如何做到的？</p>
 <p>​        b.除了捐赠于基金，剩下的如何理财？</p>
@@ -462,7 +415,7 @@ void InOrder(TreeNode *root){
 <p>​                盖茨的财富管理体系：  三个管理主体：基金会，信托基金，<strong>瀑布投资</strong></p>
 <p>​                                   管理资本：产业资本，社会资本，金融资本</p>
 <p>​    2.家族办公司的背景</p>
-<pre><code>恒大的许家印？？  销售额3700亿人民币  负债11000亿rmb
+<pre><code>恒大销售额3700亿人民币  负债11000亿rmb
 </code></pre><p>​        2013年中国家族办公室的元年</p>
 <p>​        <strong>蔡崇信</strong>  职业起始律师，  瑞典最富有家族瓦瑞达？？做家族投资  </p>
 <p>​        小扎：一年的安保500w美元   把家庭周围的房子买之后再出租出去</p>
@@ -478,8 +431,7 @@ void InOrder(TreeNode *root){
 <p>​                马化腾为什么不断的卖股票，即使每次卖都会涨？ – 真金不在纸上</p>
 <p>​                    腾讯的股票的血泪史：<strong>李泽楷？？</strong></p>
 <p>​                <strong>长期利润：垄断</strong></p>
-<p>​                        2.</p>
-<p>​                        3.家族财富的传承</p>
+<p>​                        2.家族财富的传承</p>
 <p>​            出现的原因：</p>
 <p>​                        1.激励不相容– 客户，银行，从业人员  冲突严重   opm: other people money</p>
 <p>​                            B.B.King: fool me once, shame on you; fool me twice,shame on me.</p>
@@ -497,10 +449,10 @@ void InOrder(TreeNode *root){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://99hi.vip/2017/04/12/家族传承/" data-id="cj1oyppxg000x5sugx37rrt2j" class="article-share-link">Partager</a>
+      <a data-url="http://99hi.vip/2017/04/12/家族传承/" data-id="cj1p03ozu000vlougdpucrmcp" class="article-share-link">Partager</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/经济/">经济</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/经济学习/">经济学习</a></li></ul>
 
     </footer>
   </div>
@@ -542,13 +494,7 @@ between the machine model
 (in the “solution space,” which is the place where you’re modeling that problem, such as a computer) 
 and the model of the problem that is actually being solved 
 (in the “problem space,” which is the place where the problem exists)
-</code></pre><blockquote>
-<p>oop的思想： 从问题空间抽象</p>
-<p>The object-oriented approach goes a step farther by providing tools for the programmer to represent elements in the problem space. This representation is general enough that the programmer is not constrained to any particular type of problem.</p>
-<p>将 problem space中的elements 称之为 “objects” </p>
-<p>通过这种描述，你可以在解决问题的时候，你也可以了解问题本身</p>
-<p>Each object looks quite a bit like a little computer; it has a state, and it has operations that you can as<br>it to perform. However, this doesn’t seem like such a bad analogy to objects in the real world; they all have characteristics and behaviors.</p>
-</blockquote>
+</code></pre><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">oop的思想： 从问题空间抽象</div><div class="line"></div><div class="line">The object-oriented approach goes a step farther by providing tools for the programmer to represent elements in the problem space. This representation is general enough that the programmer is not constrained to any particular type of problem.</div><div class="line"></div><div class="line">将 problem space中的elements 称之为 “objects” </div><div class="line"></div><div class="line">通过这种描述，你可以在解决问题的时候，你也可以了解问题本身</div><div class="line"></div><div class="line">Each object looks quite a bit like a little computer; it has a state, and it has operations that you can as</div><div class="line"></div><div class="line">it to perform. However, this doesn’t seem like such a bad analogy to objects in the real world; they all have characteristics and behaviors.</div></pre></td></tr></table></figure>
 <p>3.Alan Kay 总结的五条基本规则：</p>
 <p>​    a. Everything is an object.which can stores data and asking it to perform operations on itself.</p>
 <p>​    b. A program is a bunch of objects telling each other what to do by sending messages.</p>
@@ -556,29 +502,21 @@ and the model of the problem that is actually being solved
 <p>​    d.Every objects has a type. That’s to say , the class , in which “class” is synonymous with “type”.</p>
 <p>​    e.All objects of a particular type can receive the same messages.</p>
 <ol>
-<li><blockquote>
-<p>first, creating abstract data types(classes) is a fundamental concept</p>
-<p>second, create variables of a type (objects or instances) and manipulate those varibles(calles sending messages or requests)</p>
-<p>third,the members of each class share come commonality:</p>
-<p>foruth, each member has its own state </p>
-</blockquote>
+<li><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">first, creating abstract data types(classes) is a fundamental concept</div><div class="line"></div><div class="line">second, create variables of a type (objects or instances) and manipulate those varibles(calles sending messages or requests)</div><div class="line"></div><div class="line">third,the members of each class share come commonality:</div><div class="line"></div><div class="line">foruth, each member has its own state</div></pre></td></tr></table></figure>
 </li>
 <li><p>oop能把问题的规模减小？ 这个有待验证</p>
 </li>
 <li><p>这个map的关系没太明白 </p>
-<blockquote>
-<p>Indeed, one of the challenges of object-oriented programming is to<br>create a one-to-one mapping between the elements in the problem<br>space and objects in the solution space</p>
-</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Indeed, one of the challenges of object-oriented programming is to</div><div class="line"></div><div class="line">create a one-to-one mapping between the elements in the problem</div><div class="line"></div><div class="line">space and objects in the solution space</div></pre></td></tr></table></figure>
 </li>
 <li><p>Interface establishes what requests you can make for a particular objects. </p>
-<p><img src="C:\Users\smilecrazy\Desktop\捕获.PNG" alt="捕获">​</p>
 </li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://99hi.vip/2017/04/12/Thinking-in-c/" data-id="cj1oyppvj00045sug6i3gvxc7" class="article-share-link">Partager</a>
+      <a data-url="http://99hi.vip/2017/04/12/Thinking-in-c/" data-id="cj1p03oy70004louguv7f1uet" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/书籍/">书籍</a></li></ul>
@@ -613,15 +551,12 @@ and the model of the problem that is actually being solved
     <div class="article-entry" itemprop="articleBody">
       
         <p>这是人工智能讲座带给我的思考，之后找个时间再好好总结下</p>
-<blockquote>
-<p>最近听到地平线ceo余凯提到人工智能的思考，听到有人说40min并没有听到太多干货，其实不是的，今天听完创新企业的创新管理这课突然有点开朗了，似乎看到一点点的共性其实之前的时候无论人工智能被讲的多火，可惜我个人总觉得在国内很难抓到这个机会，不仅仅是本身的技术的限制，更觉得是bat的大公司的垄断但是最近听下来，突然有点觉得之前的想法有问题类从bat看来，他们最开始的融资也就几千万吧，然后垄断了人们的生活，甚至改变人们的习惯，然而这些都是developed的部门，我们运用西方的基础研究，这么看，国内的这些创新更多的是在商业模式的创新，并不是最新的idea的作用不过在网络笼罩的年代里，尤其是人工智能的今天，更重要的是人工智能的也许会普及人类生活的方方面面的时候，bat并不是全能的，所以在更多人的人看来，这就是个机会，然而如果我没有想办法把握住，细想来，就跟三十年前，老爸没有把握住机会是一样的，所以如果只能单纯的满足找个工作，那也就有被机器取代的一天，也许被别人取代的那一天就是我下岗的那一天所以无数的人看来，这是个机会，只是这个机会要如何把握住？</p>
-<p>steveJobs的传记我需要好好揣摩学习下，这个被称为一代标记的人物没有人能揣摩出他走过的路，更不能执果说因，事后诸葛切莫为之25岁的乔布斯已经身价1千万，而我现在还在不断的摸索，有的是生命和时间不知道生命这场赌还赌得起不？</p>
-</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">最近听到地平线ceo余凯提到人工智能的思考，听到有人说40min并没有听到太多干货，其实不是的，今天听完创新企业的创新管理这课突然有点开朗了，似乎看到一点点的共性其实之前的时候无论人工智能被讲的多火，可惜我个人总觉得在国内很难抓到这个机会，不仅仅是本身的技术的限制，更觉得是bat的大公司的垄断但是最近听下来，突然有点觉得之前的想法有问题类从bat看来，他们最开始的融资也就几千万吧，然后垄断了人们的生活，甚至改变人们的习惯，然而这些都是developed的部门，我们运用西方的基础研究，这么看，国内的这些创新更多的是在商业模式的创新，并不是最新的idea的作用不过在网络笼罩的年代里，尤其是人工智能的今天，更重要的是人工智能的也许会普及人类生活的方方面面的时候，bat并不是全能的，所以在更多人的人看来，这就是个机会，然而如果我没有想办法把握住，细想来，就跟三十年前，老爸没有把握住机会是一样的，所以如果只能单纯的满足找个工作，那也就有被机器取代的一天，也许被别人取代的那一天就是我下岗的那一天所以无数的人看来，这是个机会，只是这个机会要如何把握住？</div><div class="line"></div><div class="line">steveJobs的传记我需要好好揣摩学习下，这个被称为一代标记的人物没有人能揣摩出他走过的路，更不能执果说因，事后诸葛切莫为之25岁的乔布斯已经身价1千万，而我现在还在不断的摸索，有的是生命和时间不知道生命这场赌还赌得起不？</div></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://99hi.vip/2017/04/11/基础研究/" data-id="cj1oyppwt000q5sugnl5g5uve" class="article-share-link">Partager</a>
+      <a data-url="http://99hi.vip/2017/04/11/基础研究/" data-id="cj1p03ozi000qlougiapi5y3w" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
@@ -656,23 +591,15 @@ and the model of the problem that is actually being solved
     <div class="article-entry" itemprop="articleBody">
       
         <p>只半年，却觉得物是人非</p>
-<blockquote>
-<p>昨天GF来北京面试，许是最近发生了很多事情，聊的还是蛮开森的</p>
-<p>不知不觉，从高中那会子毕业到现在也五六个年头了，最后一个镜头还是高考前一天晚上，他，我还有ZX在那棵大树下聊天，说一些有的没的，那时候的心境就是尴尬的想抓紧逃离</p>
-<p>一见面就看到GF居然有白发了，年纪轻轻的，突然有了一些沧桑感，也不知道经历了什么，不过聊起来他的征友启事，气氛也就活跃起来了，还有CC &amp;&amp; JZ的天津和新乡的故事，曾经觉得CC很近，可似乎有点远离对方生活的赶脚，下次也许就是他们结婚的时候了吧</p>
-<p>后来逛了下奥林匹克公园，要给他拍张蹦起来的照片，终是照相师技术不到位，没拍出来，不过这中间倒是多了不少欢乐，GF比以前也更会照顾人了，进步不少不知道高考的时候有没有受他的影响，也懒得再去细想当时的情景，想想，也是很感谢当时的自己，并没有选择跟他在一起，也才有了今日这么逗比的相聚</p>
-<p>我想，不管对谁，都是好处，这些年，做出来的傻事不止一两件，想着跟别人那里取暖，最sb的做法，结果很多东西都变了味道十月份回家参加的WZG的婚礼，今天就看到了他家的小公举，想想那些年的少年，转眼也都到了奶爸的年纪，真是6的飞起</p>
-<p>生活真是一场马拉松，几年的时间，每个人都在飞速的变化着，虽然每天似乎总是上一天的复制经历着别人的变化，过程自是蛮多心酸，不经意就会想起自己，莫名的就会心慌慌，有的时候就会怀疑到底飘在这座城市的意义，</p>
-<p>晚上跟老妈聊起来，显然，老妈以为我是想找对象结婚了，但是，随着这些年的历史，慢慢的，身边的这些人就会成为这个社会的接班人去磨练生活，就会觉得自己成长的很慢，很多时候，没有自己的想法，单工作的事情就还没确定不过，我想，生活都会安排的，独立是我生活的一部分，为了这个目标，当前的所有事情都要学着接受和学习，老弟慢慢的在城市里面安家，我也觉得轻松了不少，抓紧把自己的窟窿都还干净，想办法出国，就是我当前的目标因为我还想飞</p>
-</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">昨天GF来北京面试，许是最近发生了很多事情，聊的还是蛮开森的</div><div class="line"></div><div class="line">不知不觉，从高中那会子毕业到现在也五六个年头了，最后一个镜头还是高考前一天晚上，他，我还有ZX在那棵大树下聊天，说一些有的没的，那时候的心境就是尴尬的想抓紧逃离</div><div class="line"></div><div class="line">一见面就看到GF居然有白发了，年纪轻轻的，突然有了一些沧桑感，也不知道经历了什么，不过聊起来他的征友启事，气氛也就活跃起来了，还有CC &amp;&amp; JZ的天津和新乡的故事，曾经觉得CC很近，可似乎有点远离对方生活的赶脚，下次也许就是他们结婚的时候了吧</div><div class="line"></div><div class="line">后来逛了下奥林匹克公园，要给他拍张蹦起来的照片，终是照相师技术不到位，没拍出来，不过这中间倒是多了不少欢乐，GF比以前也更会照顾人了，进步不少不知道高考的时候有没有受他的影响，也懒得再去细想当时的情景，想想，也是很感谢当时的自己，并没有选择跟他在一起，也才有了今日这么逗比的相聚</div><div class="line"></div><div class="line">我想，不管对谁，都是好处，这些年，做出来的傻事不止一两件，想着跟别人那里取暖，最sb的做法，结果很多东西都变了味道十月份回家参加的WZG的婚礼，今天就看到了他家的小公举，想想那些年的少年，转眼也都到了奶爸的年纪，真是6的飞起</div><div class="line"></div><div class="line">生活真是一场马拉松，几年的时间，每个人都在飞速的变化着，虽然每天似乎总是上一天的复制经历着别人的变化，过程自是蛮多心酸，不经意就会想起自己，莫名的就会心慌慌，有的时候就会怀疑到底飘在这座城市的意义，</div><div class="line"></div><div class="line">晚上跟老妈聊起来，显然，老妈以为我是想找对象结婚了，但是，随着这些年的历史，慢慢的，身边的这些人就会成为这个社会的接班人去磨练生活，就会觉得自己成长的很慢，很多时候，没有自己的想法，单工作的事情就还没确定不过，我想，生活都会安排的，独立是我生活的一部分，为了这个目标，当前的所有事情都要学着接受和学习，老弟慢慢的在城市里面安家，我也觉得轻松了不少，抓紧把自己的窟窿都还干净，想办法出国，就是我当前的目标因为我还想飞</div></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://99hi.vip/2017/04/11/奥林匹克相聚/" data-id="cj1oyppx8000t5sug7u0tmpc0" class="article-share-link">Partager</a>
+      <a data-url="http://99hi.vip/2017/04/11/奥林匹克相聚/" data-id="cj1p03ozm000tloug02afhk89" class="article-share-link">Partager</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活经历/">生活经历</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔故事/">随笔故事</a></li></ul>
 
     </footer>
   </div>
@@ -704,20 +631,14 @@ and the model of the problem that is actually being solved
     <div class="article-entry" itemprop="articleBody">
       
         <p>嗯，貌似是2017年1月15号的事情</p>
-<blockquote>
-<p> 17年16号的时候飘来了一场雪，不再是在朋友圈看到“雪”</p>
-<p>昨天参加实习的公司猿题库年会，整个还是很开森的，抽到了一直心心念念的电动牙刷，虽然也悄悄的yy个是不是可以抽到手机，嘿嘿，不过想想也是很美的嘛之前看到小秋经常喝红酒，也听到过小秋给我讲红酒的味道，看她每天晕晕的睡觉，昨天在小灰灰的鼓励下，喝了几口，入口即化的甜味终究抵不过大部分的苦味，只是细细品尝下来的酸味似乎可以稍微掩饰下苦味，hhh，再不是小时候拿着葡萄瓶满嘴的兑着水的稀释的味道</p>
-<p>也许这就是成长吧</p>
-<p>下午的时候跟LXF, XS难得的聚聚，得亏了XS大早上的电话，我不知道几年不见的时光里，每个人到底都经历了什么，或多或少的不参与到对方的生活，总觉得再见似乎有点虚虚的，也许正是这样，身边换了一波又一波，XS还是一如既往的沉默＋微笑，他在那里，总有一种大智慧的赶脚，不骄不躁，不慌不忙的就那么走着，像大海一样，宠辱不惊，一直戏称他在远方修炼，偶尔来人间食味烟火，给我们带来点仙气；XF呢，也许跟自己跟接近点吧，对着生活林林种种的欲望和奋斗，其实，无非是穷怕了，我们的不富有，我们在这个社会的立足感那么弱，刚刚从学校离开，还不懂得这个社会的法则，我们的如履薄冰却还是让我们觉得那么的不安全，我自己更是这样，有的时候怂的更不敢去面对一份感情以后不管怎样，希望生活不会让我们断了联系毕竟新的一年，也希望大家都越来越好</p>
-</blockquote>
-
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">17年16号的时候飘来了一场雪，不再是在朋友圈看到“雪”</div><div class="line"></div><div class="line">昨天参加实习的公司猿题库年会，整个还是很开森的，抽到了一直心心念念的电动牙刷，虽然也悄悄的yy个是不是可以抽到手机，嘿嘿，不过想想也是很美的嘛之前看到小秋经常喝红酒，也听到过小秋给我讲红酒的味道，看她每天晕晕的睡觉，昨天在小灰灰的鼓励下，喝了几口，入口即化的甜味终究抵不过大部分的苦味，只是细细品尝下来的酸味似乎可以稍微掩饰下苦味，hhh，再不是小时候拿着葡萄瓶满嘴的兑着水的稀释的味道</div><div class="line"></div><div class="line">也许这就是成长吧</div><div class="line"></div><div class="line">下午的时候跟LXF, XS难得的聚聚，得亏了XS大早上的电话，我不知道几年不见的时光里，每个人到底都经历了什么，或多或少的不参与到对方的生活，总觉得再见似乎有点虚虚的，也许正是这样，身边换了一波又一波，XS还是一如既往的沉默＋微笑，他在那里，总有一种大智慧的赶脚，不骄不躁，不慌不忙的就那么走着，像大海一样，宠辱不惊，一直戏称他在远方修炼，偶尔来人间食味烟火，给我们带来点仙气；XF呢，也许跟自己跟接近点吧，对着生活林林种种的欲望和奋斗，其实，无非是穷怕了，我们的不富有，我们在这个社会的立足感那么弱，刚刚从学校离开，还不懂得这个社会的法则，我们的如履薄冰却还是让我们觉得那么的不安全，我自己更是这样，有的时候怂的更不敢去面对一份感情以后不管怎样，希望生活不会让我们断了联系毕竟新的一年，也希望大家都越来越好</div></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://99hi.vip/2017/04/11/小聚/" data-id="cj1oyppxd000v5sugq3x4ga71" class="article-share-link">Partager</a>
+      <a data-url="http://99hi.vip/2017/04/11/小聚/" data-id="cj1p03p00000ylougb9138zp2" class="article-share-link">Partager</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活经历/">生活经历</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔故事/">随笔故事</a></li></ul>
 
     </footer>
   </div>
@@ -742,7 +663,7 @@ and the model of the problem that is actually being solved
   <div class="widget-wrap">
     <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/书籍/">书籍</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习资源/">学习资源</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游记/">游记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活经历/">生活经历</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/经济/">经济</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试总结/">面试总结</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/书籍/">书籍</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习资源/">学习资源</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游记/">游记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活经历/">生活经历</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/经济学习/">经济学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔故事/">随笔故事</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试总结/">面试总结</a></li></ul>
     </div>
   </div>
 
@@ -752,7 +673,7 @@ and the model of the problem that is actually being solved
   <div class="widget-wrap">
     <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
-      <a href="/tags/书籍/" style="font-size: 16.67px;">书籍</a> <a href="/tags/学习资源/" style="font-size: 10px;">学习资源</a> <a href="/tags/技术/" style="font-size: 13.33px;">技术</a> <a href="/tags/游记/" style="font-size: 10px;">游记</a> <a href="/tags/生活经历/" style="font-size: 20px;">生活经历</a> <a href="/tags/经济/" style="font-size: 10px;">经济</a> <a href="/tags/面试总结/" style="font-size: 13.33px;">面试总结</a>
+      <a href="/tags/书籍/" style="font-size: 20px;">书籍</a> <a href="/tags/学习资源/" style="font-size: 10px;">学习资源</a> <a href="/tags/技术/" style="font-size: 16.67px;">技术</a> <a href="/tags/游记/" style="font-size: 10px;">游记</a> <a href="/tags/生活经历/" style="font-size: 13.33px;">生活经历</a> <a href="/tags/经济学习/" style="font-size: 10px;">经济学习</a> <a href="/tags/随笔故事/" style="font-size: 20px;">随笔故事</a> <a href="/tags/面试总结/" style="font-size: 16.67px;">面试总结</a>
     </div>
   </div>
 

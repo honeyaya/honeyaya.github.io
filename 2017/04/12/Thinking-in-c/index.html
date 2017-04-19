@@ -12,12 +12,10 @@
 <meta property="og:url" content="http://99hi.vip/2017/04/12/Thinking-in-c/index.html">
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="3月20号到4月5号，稀稀疏疏的写了两个星期的华为2017精英挑战赛的代码，是一个网络中的经典选址问题，这里不做过多的描述，强撸了七八百行代码，这个算是为数不多自己写完的，一直不太知道怎么开始写，然后硬着头皮开始这个事情，居然还是把答案写出来了，不过优化真心做的不够好 这里也就发现一个很大的问题，既有的逻辑中，主要还是面向过程的思维，整个的代码基本上是一个点一个点的解决，这样子造成了代码的不流畅性">
-<meta property="og:image" content="c:/Users/smilecrazy/Desktop/捕获.PNG">
-<meta property="og:updated_time" content="2017-04-17T14:20:52.667Z">
+<meta property="og:updated_time" content="2017-04-19T13:03:56.716Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Thinking in c++">
 <meta name="twitter:description" content="3月20号到4月5号，稀稀疏疏的写了两个星期的华为2017精英挑战赛的代码，是一个网络中的经典选址问题，这里不做过多的描述，强撸了七八百行代码，这个算是为数不多自己写完的，一直不太知道怎么开始写，然后硬着头皮开始这个事情，居然还是把答案写出来了，不过优化真心做的不够好 这里也就发现一个很大的问题，既有的逻辑中，主要还是面向过程的思维，整个的代码基本上是一个点一个点的解决，这样子造成了代码的不流畅性">
-<meta name="twitter:image" content="c:/Users/smilecrazy/Desktop/捕获.PNG">
   
     <link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
   
@@ -99,13 +97,7 @@ between the machine model
 (in the “solution space,” which is the place where you’re modeling that problem, such as a computer) 
 and the model of the problem that is actually being solved 
 (in the “problem space,” which is the place where the problem exists)
-</code></pre><blockquote>
-<p>oop的思想： 从问题空间抽象</p>
-<p>The object-oriented approach goes a step farther by providing tools for the programmer to represent elements in the problem space. This representation is general enough that the programmer is not constrained to any particular type of problem.</p>
-<p>将 problem space中的elements 称之为 “objects” </p>
-<p>通过这种描述，你可以在解决问题的时候，你也可以了解问题本身</p>
-<p>Each object looks quite a bit like a little computer; it has a state, and it has operations that you can as<br>it to perform. However, this doesn’t seem like such a bad analogy to objects in the real world; they all have characteristics and behaviors.</p>
-</blockquote>
+</code></pre><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">oop的思想： 从问题空间抽象</div><div class="line"></div><div class="line">The object-oriented approach goes a step farther by providing tools for the programmer to represent elements in the problem space. This representation is general enough that the programmer is not constrained to any particular type of problem.</div><div class="line"></div><div class="line">将 problem space中的elements 称之为 “objects” </div><div class="line"></div><div class="line">通过这种描述，你可以在解决问题的时候，你也可以了解问题本身</div><div class="line"></div><div class="line">Each object looks quite a bit like a little computer; it has a state, and it has operations that you can as</div><div class="line"></div><div class="line">it to perform. However, this doesn’t seem like such a bad analogy to objects in the real world; they all have characteristics and behaviors.</div></pre></td></tr></table></figure>
 <p>3.Alan Kay 总结的五条基本规则：</p>
 <p>​    a. Everything is an object.which can stores data and asking it to perform operations on itself.</p>
 <p>​    b. A program is a bunch of objects telling each other what to do by sending messages.</p>
@@ -113,29 +105,21 @@ and the model of the problem that is actually being solved
 <p>​    d.Every objects has a type. That’s to say , the class , in which “class” is synonymous with “type”.</p>
 <p>​    e.All objects of a particular type can receive the same messages.</p>
 <ol>
-<li><blockquote>
-<p>first, creating abstract data types(classes) is a fundamental concept</p>
-<p>second, create variables of a type (objects or instances) and manipulate those varibles(calles sending messages or requests)</p>
-<p>third,the members of each class share come commonality:</p>
-<p>foruth, each member has its own state </p>
-</blockquote>
+<li><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">first, creating abstract data types(classes) is a fundamental concept</div><div class="line"></div><div class="line">second, create variables of a type (objects or instances) and manipulate those varibles(calles sending messages or requests)</div><div class="line"></div><div class="line">third,the members of each class share come commonality:</div><div class="line"></div><div class="line">foruth, each member has its own state</div></pre></td></tr></table></figure>
 </li>
 <li><p>oop能把问题的规模减小？ 这个有待验证</p>
 </li>
 <li><p>这个map的关系没太明白 </p>
-<blockquote>
-<p>Indeed, one of the challenges of object-oriented programming is to<br>create a one-to-one mapping between the elements in the problem<br>space and objects in the solution space</p>
-</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Indeed, one of the challenges of object-oriented programming is to</div><div class="line"></div><div class="line">create a one-to-one mapping between the elements in the problem</div><div class="line"></div><div class="line">space and objects in the solution space</div></pre></td></tr></table></figure>
 </li>
 <li><p>Interface establishes what requests you can make for a particular objects. </p>
-<p><img src="C:\Users\smilecrazy\Desktop\捕获.PNG" alt="捕获">​</p>
 </li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://99hi.vip/2017/04/12/Thinking-in-c/" data-id="cj1oyppvj00045sug6i3gvxc7" class="article-share-link">Partager</a>
+      <a data-url="http://99hi.vip/2017/04/12/Thinking-in-c/" data-id="cj1p03oy70004louguv7f1uet" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/书籍/">书籍</a></li></ul>
@@ -177,7 +161,7 @@ and the model of the problem that is actually being solved
   <div class="widget-wrap">
     <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/书籍/">书籍</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习资源/">学习资源</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游记/">游记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活经历/">生活经历</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/经济/">经济</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试总结/">面试总结</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/书籍/">书籍</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习资源/">学习资源</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游记/">游记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活经历/">生活经历</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/经济学习/">经济学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔故事/">随笔故事</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试总结/">面试总结</a></li></ul>
     </div>
   </div>
 
@@ -187,7 +171,7 @@ and the model of the problem that is actually being solved
   <div class="widget-wrap">
     <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
-      <a href="/tags/书籍/" style="font-size: 16.67px;">书籍</a> <a href="/tags/学习资源/" style="font-size: 10px;">学习资源</a> <a href="/tags/技术/" style="font-size: 13.33px;">技术</a> <a href="/tags/游记/" style="font-size: 10px;">游记</a> <a href="/tags/生活经历/" style="font-size: 20px;">生活经历</a> <a href="/tags/经济/" style="font-size: 10px;">经济</a> <a href="/tags/面试总结/" style="font-size: 13.33px;">面试总结</a>
+      <a href="/tags/书籍/" style="font-size: 20px;">书籍</a> <a href="/tags/学习资源/" style="font-size: 10px;">学习资源</a> <a href="/tags/技术/" style="font-size: 16.67px;">技术</a> <a href="/tags/游记/" style="font-size: 10px;">游记</a> <a href="/tags/生活经历/" style="font-size: 13.33px;">生活经历</a> <a href="/tags/经济学习/" style="font-size: 10px;">经济学习</a> <a href="/tags/随笔故事/" style="font-size: 20px;">随笔故事</a> <a href="/tags/面试总结/" style="font-size: 16.67px;">面试总结</a>
     </div>
   </div>
 
