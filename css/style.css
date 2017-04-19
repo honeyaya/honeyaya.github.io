@@ -201,8 +201,7 @@ body {
   text-shadow: 0 1px #fff;
   font-weight: bold;
 }
-.article-inner,
-.archive-article-inner {
+.article-inner {
   background: #fff;
   -webkit-box-shadow: 1px 2px 3px #ddd;
   box-shadow: 1px 2px 3px #ddd;
@@ -991,10 +990,6 @@ a.article-title:hover {
   page-break-inside: avoid;
   overflow: hidden;
   break-inside: avoid-column;
-}
-.archive-article-inner {
-  padding: 10px;
-  margin-bottom: 15px;
 }
 .archive-article-title {
   text-decoration: none;
