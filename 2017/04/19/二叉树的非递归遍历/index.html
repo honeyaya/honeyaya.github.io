@@ -6,13 +6,13 @@
   <title>二叉树的非递归遍历 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="2017年tecent暑期实习生的面试，报的基础研究部，莫名的安排到了腾讯地图的面试，中间的故事估计只有hr清楚吧 由于是第一面，面试官主要是围绕简历上的项目展开，或者说是跟他们做的东西有一定的契合度  GBDT和决策树以及LR的比较，这个真心得自己实现下，虽然做项目时候，都是直接调用的  面试官提到假如给你训练集不是很大的数据需要人工来完成标注，分的类大约有两百多类，大多数是地名而且是真实的？">
-<meta name="keywords" content="技术面试">
+<meta name="keywords" content="面试总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="二叉树的非递归遍历">
 <meta property="og:url" content="http://yoursite.com/2017/04/19/二叉树的非递归遍历/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="2017年tecent暑期实习生的面试，报的基础研究部，莫名的安排到了腾讯地图的面试，中间的故事估计只有hr清楚吧 由于是第一面，面试官主要是围绕简历上的项目展开，或者说是跟他们做的东西有一定的契合度  GBDT和决策树以及LR的比较，这个真心得自己实现下，虽然做项目时候，都是直接调用的  面试官提到假如给你训练集不是很大的数据需要人工来完成标注，分的类大约有两百多类，大多数是地名而且是真实的？">
-<meta property="og:updated_time" content="2017-04-19T03:10:06.299Z">
+<meta property="og:updated_time" content="2017-04-19T08:52:14.735Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二叉树的非递归遍历">
 <meta name="twitter:description" content="2017年tecent暑期实习生的面试，报的基础研究部，莫名的安排到了腾讯地图的面试，中间的故事估计只有hr清楚吧 由于是第一面，面试官主要是围绕简历上的项目展开，或者说是跟他们做的东西有一定的契合度  GBDT和决策树以及LR的比较，这个真心得自己实现下，虽然做项目时候，都是直接调用的  面试官提到假如给你训练集不是很大的数据需要人工来完成标注，分的类大约有两百多类，大多数是地名而且是真实的？">
@@ -69,11 +69,9 @@
 <p>不过面试官并没有给反馈，不知道这个答案怎么样</p>
 </li>
 <li><p>二叉树的非递归遍历</p>
-<p>​</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">中序遍历递归：</div><div class="line">void InOrder(TreeNode *root)&#123;</div><div class="line">	if(root != NULL)&#123;</div><div class="line">		InOrder(root-&gt;left);</div><div class="line">		cout &lt;&lt; root-&gt;val &lt;&lt; endl;</div><div class="line">		InOrder(root-&gt;right);</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>​        </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"> 中序遍历递归：</div><div class="line">void InOrder(TreeNode *root)&#123;</div><div class="line">	if(root != NULL)&#123;</div><div class="line">		InOrder(root-&gt;left);</div><div class="line">		cout &lt;&lt; root-&gt;val &lt;&lt; endl;</div><div class="line">		InOrder(root-&gt;right);</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <pre><code>中序遍历非递归：
 void InOrder(TreeNode *root){
   if(root == NULL) return ;
@@ -99,10 +97,10 @@ void InOrder(TreeNode *root){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/19/二叉树的非递归遍历/" data-id="cj1oovj21000c30ugbmzu7vb5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/19/二叉树的非递归遍历/" data-id="cj1oqptgs0009s0ugdvc7jcts" class="article-share-link">Teilen</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术面试/">技术面试</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试总结/">面试总结</a></li></ul>
 
     </footer>
   </div>
@@ -111,7 +109,7 @@ void InOrder(TreeNode *root){
 <nav id="article-nav">
   
     <a href="/2017/04/17/Indeed之去年网测总结/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+      <strong class="article-nav-caption">Neuer</strong>
       <div class="article-nav-title">
         
           Indeed之去年网测总结
@@ -119,6 +117,11 @@ void InOrder(TreeNode *root){
       </div>
     </a>
   
+  
+    <a href="/2017/04/19/正则表达式匹配/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">正则表达式匹配</div>
+    </a>
   
 </nav>
 
@@ -146,14 +149,14 @@ void InOrder(TreeNode *root){
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/书籍/" style="font-size: 16.67px;">书籍</a> <a href="/tags/学习资源/" style="font-size: 10px;">学习资源</a> <a href="/tags/技术/" style="font-size: 13.33px;">技术</a> <a href="/tags/技术面试/" style="font-size: 10px;">技术面试</a> <a href="/tags/游记/" style="font-size: 10px;">游记</a> <a href="/tags/生活经历/" style="font-size: 20px;">生活经历</a> <a href="/tags/经济/" style="font-size: 10px;">经济</a> <a href="/tags/面试总结/" style="font-size: 10px;">面试总结</a>
+      <a href="/tags/书籍/" style="font-size: 17.5px;">书籍</a> <a href="/tags/学习资源/" style="font-size: 10px;">学习资源</a> <a href="/tags/技术/" style="font-size: 15px;">技术</a> <a href="/tags/技术面试/" style="font-size: 10px;">技术面试</a> <a href="/tags/游记/" style="font-size: 10px;">游记</a> <a href="/tags/生活经历/" style="font-size: 20px;">生活经历</a> <a href="/tags/经济/" style="font-size: 10px;">经济</a> <a href="/tags/面试总结/" style="font-size: 12.5px;">面试总结</a>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li></ul>
     </div>
@@ -163,9 +166,13 @@ void InOrder(TreeNode *root){
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/04/19/正则表达式匹配/">正则表达式匹配</a>
+          </li>
         
           <li>
             <a href="/2017/04/19/二叉树的非递归遍历/">二叉树的非递归遍历</a>
@@ -181,10 +188,6 @@ void InOrder(TreeNode *root){
         
           <li>
             <a href="/2017/04/13/C++之STL/">c++ STL</a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/12/家族传承/">家族办公室</a>
           </li>
         
       </ul>
