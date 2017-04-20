@@ -969,10 +969,10 @@ a.article-title:hover {
   vertical-align: middle;
 }
 .archive-article-header > a {
-  width: 300px;
+  width: 150px;
 }
 .archive-article-header h1 {
-  width: calc(100% - 300px);
+  width: calc(100% - 200px);
   font-size: 100%;
   margin: 0;
 }
