@@ -966,10 +966,10 @@ a.article-title:hover {
   vertical-align: middle;
 }
 .archive-article-header > a {
-  width: 30%;
+  width: 25%;
 }
 .archive-article-header h1 {
-  width: 60%;
+  width: 75%;
   font-size: 100%;
   margin: 0;
 }
