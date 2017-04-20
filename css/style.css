@@ -964,6 +964,19 @@ a.article-title:hover {
   padding: 10px;
   margin-bottom: 15px;
 }
+.archive-article-header > a,
+.archive-article-header > h1 {
+  display: inline-block;
+  vertical-align: middle;
+}
+.archive-article-header > a {
+  width: 100px;
+}
+.archive-article-header h1 {
+  width: calc(100% - 120px);
+  font-size: 100%;
+  margin: 0;
+}
 .archive-article-title {
   fint-weight: 200;
 /* text-decoration: none
