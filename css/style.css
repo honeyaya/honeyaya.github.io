@@ -961,8 +961,7 @@ a.article-title:hover {
 .archive-article-inner {
   display: block;
 /*@extend $block*/
-  padding: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .archive-article-header > a,
 .archive-article-header > h1 {
@@ -970,15 +969,15 @@ a.article-title:hover {
   vertical-align: middle;
 }
 .archive-article-header > a {
-  width: 100px;
+  width: 300px;
 }
 .archive-article-header h1 {
-  width: calc(100% - 120px);
+  width: calc(100% - 300px);
   font-size: 100%;
   margin: 0;
 }
 .archive-article-title {
-  fint-weight: 200;
+  font-weight: 200;
   color: #222;
   text-decoration: none;
   -webkit-transition: color 0.2s;
