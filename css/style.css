@@ -128,7 +128,7 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 .outer {
-  max-width: 1220px;
+  max-width: 70%;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -141,10 +141,7 @@ body {
   clear: both;
 }
 .inner {
-  display: inline;
-  float: left;
-  width: 98.33333333333333%;
-  margin: 0 0.833333333333333%;
+  width: 60%;
 }
 .left,
 .alignleft {
