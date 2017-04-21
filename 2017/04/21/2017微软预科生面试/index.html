@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>2017微软预科生面试 | null</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一天面试了三轮 今年面试的超多人， 第一波9点开始，一般都会面两轮，两轮之后会刷一部分人 前两轮面试基本上就是简历上的项目+算法题目   第一轮面试题目给定一个数组，找到子序列和为奇数的最大值 上来直接就写dp状态转移方程式，被面试官一个反例直接推翻，突然想起来 和是奇数 =  前边的序列和是偶数 +  num[i] 是奇数 和是偶数 =  前边的序列和是奇数 +  num[i] 是偶数 那么需要">
+<meta name="keywords" content="面试总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2017微软预科生面试">
+<meta property="og:url" content="http://99hi.vip/2017/04/21/2017微软预科生面试/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="一天面试了三轮 今年面试的超多人， 第一波9点开始，一般都会面两轮，两轮之后会刷一部分人 前两轮面试基本上就是简历上的项目+算法题目   第一轮面试题目给定一个数组，找到子序列和为奇数的最大值 上来直接就写dp状态转移方程式，被面试官一个反例直接推翻，突然想起来 和是奇数 =  前边的序列和是偶数 +  num[i] 是奇数 和是偶数 =  前边的序列和是奇数 +  num[i] 是偶数 那么需要">
+<meta property="og:updated_time" content="2017-04-21T14:34:43.112Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2017微软预科生面试">
+<meta name="twitter:description" content="一天面试了三轮 今年面试的超多人， 第一波9点开始，一般都会面两轮，两轮之后会刷一部分人 前两轮面试基本上就是简历上的项目+算法题目   第一轮面试题目给定一个数组，找到子序列和为奇数的最大值 上来直接就写dp状态转移方程式，被面试官一个反例直接推翻，突然想起来 和是奇数 =  前边的序列和是偶数 +  num[i] 是奇数 和是偶数 =  前边的序列和是奇数 +  num[i] 是偶数 那么需要">
+  
+    <link rel="alternate" href="/atom.xml" title="null" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">null</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://99hi.vip"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2017微软预科生面试" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/21/2017微软预科生面试/" class="article-date">
+  <time datetime="2017-04-21T13:00:11.000Z" itemprop="datePublished">2017-04-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2017微软预科生面试
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一天面试了三轮</p>
+<p>今年面试的超多人， 第一波9点开始，一般都会面两轮，两轮之后会刷一部分人</p>
+<p>前两轮面试基本上就是简历上的项目+算法题目</p>
+<hr>
+<ul>
+<li><p>第一轮面试题目给定一个数组，找到子序列和为奇数的最大值</p>
+<p>上来直接就写dp状态转移方程式，被面试官一个反例直接推翻，突然想起来</p>
+<p>和是奇数 =  前边的序列和是偶数 +  num[i] 是奇数</p>
+<p>和是偶数 =  前边的序列和是奇数 +  num[i] 是偶数</p>
+<p>那么需要保存的就是偶数以及奇数两种情况</p>
+<p>类似求一个数组中子序列乘积最大的求法</p>
+<p>写完之后，第一个点考虑溢出的情况，我说把保存结果的两个数组改为long </p>
+<p>​          第二个点考虑算法的复用性，一直在考虑max算法的重载，表示有点晕，然后面试官提醒说把max,min作为参数传进来</p>
+<p>​</p>
+</li>
+<li><p>第二轮面试题目</p>
+<ul>
+<li><p>给定两个数组，一个递增，一个递减，找到两个数组重合的数</p>
+<p>从O(nlogn) 到 O(n)的改进</p>
+<p>这个两个端指针分别遍历，实现不是很难</p>
+<p>当时体力不支，面试官开始问时间复杂度的时候，已经有点蒙了， 最好O(min(m,n)) ,最坏 O((m + n))</p>
+<p>但其实，我脑袋里的想法都是线性的，并没有看到很不一样的地方</p>
+</li>
+<li><p>给一个字符串求全排列</p>
+<p>表示这个递归真心写的不爽，不过微软的工程师都很nice，在你不想写的时候，他们会鼓励你继续写，我觉得这个是超吸引的一点，能学到很多，你会知道自己当前的几种思路哪些不可行，他们对与方法可行性的判断表示更迅速准确，面试是个跟他们有互动的良好机会，能学到很多</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li><p>第三轮面试</p>
+<p>​    遇到一位小帅锅，蹭了顿饭，错过了盒饭，微软食堂真心点赞</p>
+<p>​    唉，就是吃太饱了，整个人昏昏欲睡的</p>
+<p>​    面试官气场超强，关于项目的考察简直了，明明接触数据的是我，整个面下来，感觉是他给我讲方法，一个问题比一个问题犀利，问完之后，觉得自己之前什么都没做，嗯，没错就是这种感觉，不过现在想起来，面试官教给我的是解决问题的主观能动性，即使你现在的业务需求并没有这些，但是你的直觉以及兴趣会有更多可以做的东西。</p>
+<p>​    算法题目：给定两个有序数组，求其中第k个数</p>
+<p>​    我问数组有多大，他说可以接收，我就开始狂写了一个线性的算法，表示当时面试官在边上狂写代码，尴尬癌发作：</p>
+<p>​    面试官一抬头，“你这边界有问题吧？”  … 是哦，一顿改</p>
+<p>​    面试官二抬头，“你这可能出现死循环吧？” …是哦，一顿改</p>
+<p>​    面试官三抬头，”你这算法的复杂度？”… 线性的… “怎么优化？”</p>
+<p>​    “从一半开始找吧，莫名的写了2/k, 明明想写 k/2的” 面试官说:”别紧张吖，算法思路没错，接下来怎么办” ….</p>
+<p>​    “…” 基本上就完全断片了</p>
+<p>​    面不下去了，面试官友情提醒我，编码能力有待提高，感觉gg了</p>
+<p>​</p>
+<p>面了三面之后的结论是编码能力不太够，回去继续练习，估计gg了</p>
+<p>​</p>
+<p>ps,面试过程中有面到大数加法的，也有面到股票的变化的，也有链表的深复制的，矩阵的运算，希望多多准备吧。       </p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://99hi.vip/2017/04/21/2017微软预科生面试/" data-id="cj1ryfnlr0000s0ugfzrrsa8f" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试总结/">面试总结</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/04/19/正则表达式匹配/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          正则表达式匹配
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/04/21/2017摩根士丹利暑期实习电话面试/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">2017摩根士丹利暑期实习电话面试</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Mot-clés</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/书籍/">书籍</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习资源/">学习资源</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游记/">游记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/经济学习/">经济学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔故事/">随笔故事</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试总结/">面试总结</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/书籍/" style="font-size: 17.5px;">书籍</a> <a href="/tags/学习资源/" style="font-size: 10px;">学习资源</a> <a href="/tags/技术/" style="font-size: 12.5px;">技术</a> <a href="/tags/游记/" style="font-size: 10px;">游记</a> <a href="/tags/经济学习/" style="font-size: 10px;">经济学习</a> <a href="/tags/随笔故事/" style="font-size: 20px;">随笔故事</a> <a href="/tags/面试总结/" style="font-size: 15px;">面试总结</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/21/2017摩根士丹利暑期实习电话面试/">2017摩根士丹利暑期实习电话面试</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/21/2017微软预科生面试/">2017微软预科生面试</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/19/正则表达式匹配/">正则表达式匹配</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/19/二叉树的非递归遍历/">二叉树的非递归遍历</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/17/Indeed之去年网测总结/">Indeed之去年网测总结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 SmileCrazy<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
