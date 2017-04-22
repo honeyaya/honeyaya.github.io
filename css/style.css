@@ -671,6 +671,8 @@ a.article-title:hover {
   margin-top: 0;
 }
 .article-content {
+  word-wrap: break-word;
+  word-break: break-all;
   overflow: hidden;
 }
 .article-more-link a {
