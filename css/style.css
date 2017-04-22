@@ -548,8 +548,9 @@ a.article-title:hover {
   color: #258fb8;
 }
 .article-entry {
-  overflow: hidden;
   color: #555;
+  overflow: hidden;
+  text-overflow: ellipsis;
   padding: 0 20px;
 }
 .article-entry:before,
