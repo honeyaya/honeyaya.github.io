@@ -84,20 +84,22 @@
 
       </header>
     
-    <div class="article-entry" >
-    	<p height=100px><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">匹配包含 . 和 *  的正则表达式， . 可以表示任意一个字符， *  表示它前面的字符可以出现任意次(含0次)，例如 字符串aaa和 模式a.a  和 ab * ac * a 匹配，但和 aa.a  以及 ab * a均不匹配</div></pre></td></tr></table></figure>
+    <div height=100px>
+    	<div class="article-entry" >
+    	    <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">匹配包含 . 和 *  的正则表达式， . 可以表示任意一个字符， *  表示它前面的字符可以出现任意次(含0次)，例如 字符串aaa和 模式a.a  和 ab * ac * a 匹配，但和 aa.a  以及 ab * a均不匹配</div></pre></td></tr></table></figure>
 <p>思路分析：每次从字符串中拿出一个字符和模式中的字符匹配，如果模式中的字符ch是.  那么可以完成匹配，如果ch不是.并且字符串中的字符也是ch,也是相互匹配的，当两者匹配时，接着匹配后面的字符。</p>
 <p>当模式中的第二个字符不是*，如果字符串中的第一个字符和模式中的第一个字符匹配，那么字符串和模式均向后移动一个字符，然后继续匹配，如果字符串中的第一个字符和模式中的第一个字符不相匹配，则直接返回false</p>
 <p>当模式中的第二个字符是 <em>的时候，此时可能有多种匹配方式，一种是直接在模式上向后移动两个字符，相当与 </em> 和前面的字符被忽略， * 可以匹配0个字符。如果模式中的第一个字符和字符串中的第一个字符相匹配，则在字符串向后移动一个字符，模式串有两个选择： 可以向后移动两个，也可以保持不变。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">#include <span class="tag">&lt;<span class="name">iostream</span>&gt;</span></div><div class="line">#include <span class="tag">&lt;<span class="name">cstring</span>&gt;</span></div><div class="line">using namespace std;</div><div class="line"></div><div class="line">bool match(char* str,char* pattern)&#123;</div><div class="line">	if(*str=='\0' &amp;&amp; *pattern == '\0')</div><div class="line">		return true;</div><div class="line">		</div><div class="line">	if(*str!='\0' &amp;&amp; *pattern == '\0')</div><div class="line">		return false;</div><div class="line">		</div><div class="line">	if(*(pattern + 1) == '*')&#123;</div><div class="line">		if(*pattern == *str || (*pattern == '.' &amp;&amp; *str != '\0'))</div><div class="line">			return match(str + 1, pattern + 2) || match(str + 1, pattern) || match(str, pattern + 2);</div><div class="line">		else</div><div class="line">			return match(str, pattern + 2); </div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	if(*str == *pattern || (*pattern == '.' &amp;&amp; *str != '\0'))&#123;</div><div class="line">		return match(str + 1, pattern + 1);</div><div class="line">	&#125;</div><div class="line">	return false;</div><div class="line">&#125;</div><div class="line">int main()&#123;</div><div class="line">	char str[100],pattern[100];</div><div class="line">	while(cin &gt;&gt; str &gt;&gt; pattern)&#123;</div><div class="line">		bool ans = match(str,pattern);</div><div class="line">		printf("%d\n",ans);</div><div class="line">	&#125;</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>自动转换机，状态的选择</p>
- </p>
-	<p class="article-more-link">
-	   <a href="/2017/04/19/正则表达式匹配/#more">read more</a>
-	</p>
+ 
+	    <p class="article-more-link">
+	       <a href="/2017/04/19/正则表达式匹配/#more">read more</a>
+ 	    </p>
+        </div>
     </div>
     <footer class="article-footer">
-      <a data-url="http://99hi.vip/2017/04/19/正则表达式匹配/" data-id="cj1ut8czb0014kcugbznnqqgb" class="article-share-link">Share</a>
+      <a data-url="http://99hi.vip/2017/04/19/正则表达式匹配/" data-id="cj1utgf5v001bssugis04wyvq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试总结/">面试总结</a></li></ul>
