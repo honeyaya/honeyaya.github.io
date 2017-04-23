@@ -46,9 +46,7 @@
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
         
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
+          <a class="main-nav-link" href="/archives">Home</a>
         
       </nav>
       <nav id="sub-nav">
@@ -84,7 +82,7 @@
 
       </header>
     
-    	<div class="article-entry" style="height:100px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis">
+    	<div class="article-entry">
     	    <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">匹配包含 . 和 *  的正则表达式， . 可以表示任意一个字符， *  表示它前面的字符可以出现任意次(含0次)，例如 字符串aaa和 模式a.a  和 ab * ac * a 匹配，但和 aa.a  以及 ab * a均不匹配</div></pre></td></tr></table></figure>
 <p>思路分析：每次从字符串中拿出一个字符和模式中的字符匹配，如果模式中的字符ch是.  那么可以完成匹配，如果ch不是.并且字符串中的字符也是ch,也是相互匹配的，当两者匹配时，接着匹配后面的字符。</p>
 <p>当模式中的第二个字符不是*，如果字符串中的第一个字符和模式中的第一个字符匹配，那么字符串和模式均向后移动一个字符，然后继续匹配，如果字符串中的第一个字符和模式中的第一个字符不相匹配，则直接返回false</p>
@@ -97,7 +95,7 @@
  	    </p>
         </div>
     <footer class="article-footer">
-      <a data-url="http://99hi.vip/2017/04/19/正则表达式匹配/" data-id="cj1uu1b6o001ct4ug1k634zj7" class="article-share-link">Share</a>
+      <a data-url="http://99hi.vip/2017/04/19/正则表达式匹配/" data-id="cj1uuoui40019m0ugoy09g94q" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试总结/">面试总结</a></li></ul>
@@ -212,9 +210,7 @@
     </div>
     <nav id="mobile-nav">
   
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+    <a href="/archives" class="mobile-nav-link">Home</a>
   
 </nav>
     
