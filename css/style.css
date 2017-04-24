@@ -1092,7 +1092,6 @@ a.article-title:hover {
   background: #fff;
   text-shadow: 0 1px #fff;
   padding: 0 0.3em;
-  width: 100px;
 }
 .article-entry pre code {
   background: none;
@@ -1106,7 +1105,7 @@ a.article-title:hover {
 }
 .article-entry .highlight table {
   margin: 0;
-  width: 100px;
+  width: 10px;
 }
 .article-entry .highlight td {
   border: none;
