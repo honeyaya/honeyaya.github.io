@@ -1130,6 +1130,7 @@ a.article-title:hover {
 .article-entry .highlight .gutter pre {
   text-align: right;
   padding-right: 20px;
+  width: 10px;
 }
 .article-entry .highlight .line {
   height: 25.6px;
