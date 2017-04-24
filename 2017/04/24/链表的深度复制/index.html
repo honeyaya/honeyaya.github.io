@@ -3,19 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>半梦 | bloooooom</title>
+  <title>链表的深度复制 | bloooooom</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="活得真实 1234567金星        36岁的人生自传 精彩 活的很坦诚        居然是狮子座的女人 自信大胆的活着        我在她的身上看到自己的影子 只是她比我活的更彻底">
-<meta name="keywords" content="书籍">
+  <meta name="description" content="看到一道不错的链表题目，leetcode138,在这里分享下： 给一个链表，完成深度复制 1.假如链表只是单一链表，直接完成复制即可 2.假如链表中一个结点有next指针，random指针两个指针，这时候就会出现random指向的结点可能不存在，也就没办法用指针链接过去，这个时候，采用下面的方法就可以完美的解决这个问题，首先，完成每个节点的复制，然后考虑random指针的复制，最后分离两个链表就可">
+<meta name="keywords" content="技术">
 <meta property="og:type" content="article">
-<meta property="og:title" content="半梦">
-<meta property="og:url" content="http://99hi.vip/2017/04/11/半梦/index.html">
+<meta property="og:title" content="链表的深度复制">
+<meta property="og:url" content="http://99hi.vip/2017/04/24/链表的深度复制/index.html">
 <meta property="og:site_name" content="bloooooom">
-<meta property="og:description" content="活得真实 1234567金星        36岁的人生自传 精彩 活的很坦诚        居然是狮子座的女人 自信大胆的活着        我在她的身上看到自己的影子 只是她比我活的更彻底">
-<meta property="og:updated_time" content="2017-04-19T13:00:06.010Z">
+<meta property="og:description" content="看到一道不错的链表题目，leetcode138,在这里分享下： 给一个链表，完成深度复制 1.假如链表只是单一链表，直接完成复制即可 2.假如链表中一个结点有next指针，random指针两个指针，这时候就会出现random指向的结点可能不存在，也就没办法用指针链接过去，这个时候，采用下面的方法就可以完美的解决这个问题，首先，完成每个节点的复制，然后考虑random指针的复制，最后分离两个链表就可">
+<meta property="og:image" content="http://i2.muimg.com/567571/0b7915d365df330f.jpg">
+<meta property="og:updated_time" content="2017-04-24T14:49:50.285Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="半梦">
-<meta name="twitter:description" content="活得真实 1234567金星        36岁的人生自传 精彩 活的很坦诚        居然是狮子座的女人 自信大胆的活着        我在她的身上看到自己的影子 只是她比我活的更彻底">
+<meta name="twitter:title" content="链表的深度复制">
+<meta name="twitter:description" content="看到一道不错的链表题目，leetcode138,在这里分享下： 给一个链表，完成深度复制 1.假如链表只是单一链表，直接完成复制即可 2.假如链表中一个结点有next指针，random指针两个指针，这时候就会出现random指向的结点可能不存在，也就没办法用指针链接过去，这个时候，采用下面的方法就可以完美的解决这个问题，首先，完成每个节点的复制，然后考虑random指针的复制，最后分离两个链表就可">
+<meta name="twitter:image" content="http://i2.muimg.com/567571/0b7915d365df330f.jpg">
   
     <link rel="alternate" href="/atom.xml" title="bloooooom" type="application/atom+xml">
   
@@ -62,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-半梦" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-链表的深度复制" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/04/11/半梦/" class="article-date">
-  <time datetime="2017-04-11T13:51:05.000Z" itemprop="datePublished">2017-04-11</time>
+    <a href="/2017/04/24/链表的深度复制/" class="article-date">
+  <time datetime="2017-04-24T14:10:17.000Z" itemprop="datePublished">2017-04-24</time>
 </a>
     
   </div>
@@ -76,25 +78,29 @@
         
   
     <h1 class="article-title" itemprop="name">
-      半梦
+      链表的深度复制
     </h1>
   
 
       </header>
     
     	<div class="article-entry">
-    	    <p>活得真实</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">金星</div><div class="line"></div><div class="line">        36岁的人生自传 精彩 活的很坦诚</div><div class="line"></div><div class="line">        居然是狮子座的女人 自信大胆的活着</div><div class="line"></div><div class="line">        我在她的身上看到自己的影子 只是她比我活的更彻底</div></pre></td></tr></table></figure>
+    	    <p>看到一道不错的链表题目，leetcode138,在这里分享下：</p>
+<p>给一个链表，完成深度复制</p>
+<p>1.假如链表只是单一链表，直接完成复制即可</p>
+<p>2.假如链表中一个结点有next指针，random指针两个指针，这时候就会出现random指向的结点可能不存在，也就没办法用指针链接过去，这个时候，采用下面的方法就可以完美的解决这个问题，首先，完成每个节点的复制，然后考虑random指针的复制，最后分离两个链表就可以完成</p>
+<p><img src="http://i2.muimg.com/567571/0b7915d365df330f.jpg" alt="1"></p>
+<p>3.上图中是一个结点有两个指针，可以考虑假如是多个指针，也就是所谓的图的深度复制，这个方法还在更新中。。</p>
  
 	    <p class="article-more-link">
-	       <a href="/2017/04/11/半梦/#more">read more</a>
+	       <a href="/2017/04/24/链表的深度复制/#more">read more</a>
  	    </p>
         </div>
     <footer class="article-footer">
-      <a data-url="http://99hi.vip/2017/04/11/半梦/" data-id="cj1w8pd7l000x4ougnc2z2w0j" class="article-share-link">Delen</a>
+      <a data-url="http://99hi.vip/2017/04/24/链表的深度复制/" data-id="cj1w8pd9i001u4ougfsl74fad" class="article-share-link">Delen</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/书籍/">书籍</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
 
     </footer>
   </div>
@@ -102,19 +108,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/04/11/那些回不去的年少时光/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/04/23/一个女人的史诗/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Nieuwer</strong>
       <div class="article-nav-title">
         
-          那些回不去的年少时光
+          一个女人的史诗
         
       </div>
     </a>
   
   
-    <a href="/2017/04/11/仙气环绕-蓦然回首-已然朦胧/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/04/24/入职带来的一些思考/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Ouder</strong>
-      <div class="article-nav-title">仙气环绕 蓦然回首 已然朦胧</div>
+      <div class="article-nav-title">入职带来的一些思考</div>
     </a>
   
 </nav>

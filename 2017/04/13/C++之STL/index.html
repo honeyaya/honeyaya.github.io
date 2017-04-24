@@ -5,17 +5,23 @@
   
   <title>c++ STL | bloooooom</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="STL String1http://i4.buimg.com/567571/6a3d341d15587b86.png string 类是一个模板类，用意字符串操作 1.构造赋值 1234567string s1 = &quot;hello&quot;string s2(&quot;hello&quot;)string s2 = s1s4.assign(s2) 2.字符访问 12345671.[]   s[0]2.at(int) s.at">
+  <meta name="description" content="STL String string 类是一个模板类，用意字符串操作 1.构造赋值 1234567string s1 = &quot;hello&quot;string s2(&quot;hello&quot;)string s2 = s1s4.assign(s2) 2.字符访问 12345671.[]   s[0]2.at(int) s.at(2)  有范围检查，超过范围，out of range 异常3.substr(int,int)">
 <meta name="keywords" content="技术">
 <meta property="og:type" content="article">
 <meta property="og:title" content="c++ STL">
 <meta property="og:url" content="http://99hi.vip/2017/04/13/C++之STL/index.html">
 <meta property="og:site_name" content="bloooooom">
-<meta property="og:description" content="STL String1http://i4.buimg.com/567571/6a3d341d15587b86.png string 类是一个模板类，用意字符串操作 1.构造赋值 1234567string s1 = &quot;hello&quot;string s2(&quot;hello&quot;)string s2 = s1s4.assign(s2) 2.字符访问 12345671.[]   s[0]2.at(int) s.at">
-<meta property="og:updated_time" content="2017-04-19T13:50:55.894Z">
+<meta property="og:description" content="STL String string 类是一个模板类，用意字符串操作 1.构造赋值 1234567string s1 = &quot;hello&quot;string s2(&quot;hello&quot;)string s2 = s1s4.assign(s2) 2.字符访问 12345671.[]   s[0]2.at(int) s.at(2)  有范围检查，超过范围，out of range 异常3.substr(int,int)">
+<meta property="og:image" content="http://i4.buimg.com/567571/6a3d341d15587b86.png">
+<meta property="og:image" content="http://i4.buimg.com/567571/c472890af656bf16.png">
+<meta property="og:image" content="http://i1.piimg.com/567571/33b2c17f26a560f9.png">
+<meta property="og:image" content="http://i4.buimg.com/567571/6cc5230e96d16947.png">
+<meta property="og:image" content="http://i1.piimg.com/567571/ac386ccd264d2777.png">
+<meta property="og:updated_time" content="2017-04-24T14:26:14.152Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c++ STL">
-<meta name="twitter:description" content="STL String1http://i4.buimg.com/567571/6a3d341d15587b86.png string 类是一个模板类，用意字符串操作 1.构造赋值 1234567string s1 = &quot;hello&quot;string s2(&quot;hello&quot;)string s2 = s1s4.assign(s2) 2.字符访问 12345671.[]   s[0]2.at(int) s.at">
+<meta name="twitter:description" content="STL String string 类是一个模板类，用意字符串操作 1.构造赋值 1234567string s1 = &quot;hello&quot;string s2(&quot;hello&quot;)string s2 = s1s4.assign(s2) 2.字符访问 12345671.[]   s[0]2.at(int) s.at(2)  有范围检查，超过范围，out of range 异常3.substr(int,int)">
+<meta name="twitter:image" content="http://i4.buimg.com/567571/6a3d341d15587b86.png">
   
     <link rel="alternate" href="/atom.xml" title="bloooooom" type="application/atom+xml">
   
@@ -53,7 +59,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://99hi.vip"></form>
@@ -84,7 +90,7 @@
     
     	<div class="article-entry">
     	    <p>STL</p>
-<h5 id="String"><a href="#String" class="headerlink" title="String"></a>String</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://i4.buimg.com/567571/6a3d341d15587b86.png</div></pre></td></tr></table></figure>
+<h5 id="String"><a href="#String" class="headerlink" title="String"></a>String</h5><p><img src="http://i4.buimg.com/567571/6a3d341d15587b86.png" alt="1"></p>
 <p>string 类是一个模板类，用意字符串操作</p>
 <p>1.构造赋值</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">string s1 = "hello"</div><div class="line"></div><div class="line">string s2("hello")</div><div class="line"></div><div class="line">string s2 = s1</div><div class="line"></div><div class="line">s4.assign(s2)</div></pre></td></tr></table></figure>
@@ -130,17 +136,17 @@
 
 * 函数对象即重载了操作符()的对象
     1.类的实例都可以称作为函数对象
-</code></pre><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://i4.buimg.com/567571/c472890af656bf16.png</div></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://i1.piimg.com/567571/33b2c17f26a560f9.png</div></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://i4.buimg.com/567571/6cc5230e96d16947.png</div></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://i1.piimg.com/567571/ac386ccd264d2777.png</div></pre></td></tr></table></figure>
+</code></pre><p><img src="http://i4.buimg.com/567571/c472890af656bf16.png" alt="2"></p>
+<p><img src="http://i1.piimg.com/567571/33b2c17f26a560f9.png" alt="3"></p>
+<p><img src="http://i4.buimg.com/567571/6cc5230e96d16947.png" alt="4"></p>
+<p><img src="http://i1.piimg.com/567571/ac386ccd264d2777.png" alt="5"></p>
  
 	    <p class="article-more-link">
 	       <a href="/2017/04/13/C++之STL/#more">read more</a>
  	    </p>
         </div>
     <footer class="article-footer">
-      <a data-url="http://99hi.vip/2017/04/13/C++之STL/" data-id="cj1uuxb450004psug9s4qsomq" class="article-share-link">Share</a>
+      <a data-url="http://99hi.vip/2017/04/13/C++之STL/" data-id="cj1w8pd5f00044oug2mi1c61z" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
@@ -152,7 +158,7 @@
 <nav id="article-nav">
   
     <a href="/2017/04/12/家族传承/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+      <strong class="article-nav-caption">Nieuwer</strong>
       <div class="article-nav-title">
         
           家族办公室
@@ -162,7 +168,7 @@
   
   
     <a href="/2017/04/14/百望山/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Ouder</strong>
       <div class="article-nav-title">百望山</div>
     </a>
   
@@ -181,9 +187,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Labels</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/书籍/">书籍</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习资源/">学习资源</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游记/">游记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/经济学习/">经济学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔故事/">随笔故事</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试总结/">面试总结</a><span class="tag-list-count">5</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/书籍/">书籍</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习资源/">学习资源</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游记/">游记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/经济学习/">经济学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔故事/">随笔故事</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试总结/">面试总结</a><span class="tag-list-count">5</span></li></ul>
     </div>
   </div>
 
@@ -193,7 +199,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">词云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/书籍/" style="font-size: 20px;">书籍</a> <a href="/tags/学习资源/" style="font-size: 10px;">学习资源</a> <a href="/tags/技术/" style="font-size: 13.33px;">技术</a> <a href="/tags/游记/" style="font-size: 10px;">游记</a> <a href="/tags/经济学习/" style="font-size: 10px;">经济学习</a> <a href="/tags/随笔故事/" style="font-size: 20px;">随笔故事</a> <a href="/tags/面试总结/" style="font-size: 16.67px;">面试总结</a>
+      <a href="/tags/书籍/" style="font-size: 17.5px;">书籍</a> <a href="/tags/学习资源/" style="font-size: 10px;">学习资源</a> <a href="/tags/技术/" style="font-size: 12.5px;">技术</a> <a href="/tags/游记/" style="font-size: 10px;">游记</a> <a href="/tags/经济学习/" style="font-size: 10px;">经济学习</a> <a href="/tags/随笔故事/" style="font-size: 20px;">随笔故事</a> <a href="/tags/面试总结/" style="font-size: 15px;">面试总结</a>
     </div>
   </div>
 
@@ -201,9 +207,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archieven</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">31</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">33</span></li></ul>
     </div>
   </div>
 
@@ -211,9 +217,17 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Recente berichten</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/04/24/入职带来的一些思考/">入职带来的一些思考</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/24/链表的深度复制/">链表的深度复制</a>
+          </li>
         
           <li>
             <a href="/2017/04/23/一个女人的史诗/">一个女人的史诗</a>
@@ -225,14 +239,6 @@
         
           <li>
             <a href="/2017/04/21/2017摩根士丹利暑期实习电话面试/">2017摩根士丹利暑期实习电话面试</a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/21/2017微软预科生面试/">2017微软预科生面试</a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/19/正则表达式匹配/">正则表达式匹配</a>
           </li>
         
       </ul>
