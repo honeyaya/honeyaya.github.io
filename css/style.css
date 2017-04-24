@@ -605,7 +605,7 @@ a.article-title:hover {
   border: none;
 }
 .article-entry table {
-  width: 30%;
+  width: 60%;
   border-collapse: collapse;
   border-spacing: 0;
 }
@@ -1105,11 +1105,13 @@ a.article-title:hover {
 }
 .article-entry .highlight table {
   margin: 0;
-  width: 300px;
+  table-layout: fixed;
 }
 .article-entry .highlight td {
   border: none;
   padding: 0;
+  word-break: break-all;
+  word-wrap: break-word;
 }
 .article-entry .highlight figcaption {
   font-size: 0.85em;
