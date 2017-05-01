@@ -5,17 +5,17 @@
   
   <title>正则表达式匹配 | bloooooom</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1匹配包含 . 和 *  的正则表达式， . 可以表示任意一个字符， *  表示它前面的字符可以出现任意次(含0次)，例如 字符串aaa和 模式a.a  和 ab * ac * a 匹配，但和 aa.a  以及 ab * a均不匹配 思路分析：每次从字符串中拿出一个字符和模式中的字符匹配，如果模式中的字符ch是.  那么可以完成匹配，如果ch不是.并且字符串中的字符也是ch,也是相互匹配的，当两者">
+  <meta name="description" content="匹配包含 . 和   的正则表达式， . 可以表示任意一个字符，   表示它前面的字符可以出现任意次(含0次)，例如 字符串aaa和 模式a.a  和 ab  ac  a 匹配，但和 aa.a  以及 ab * a均不匹配  思路分析：每次从字符串中拿出一个字符和模式中的字符匹配，如果模式中的字符ch是.  那么可以完成匹配，如果ch不是.并且字符串中的字符也是ch,也是相互匹配的，当两者匹配时">
 <meta name="keywords" content="面试总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="正则表达式匹配">
 <meta property="og:url" content="http://99hi.vip/2017/04/19/正则表达式匹配/index.html">
 <meta property="og:site_name" content="bloooooom">
-<meta property="og:description" content="1匹配包含 . 和 *  的正则表达式， . 可以表示任意一个字符， *  表示它前面的字符可以出现任意次(含0次)，例如 字符串aaa和 模式a.a  和 ab * ac * a 匹配，但和 aa.a  以及 ab * a均不匹配 思路分析：每次从字符串中拿出一个字符和模式中的字符匹配，如果模式中的字符ch是.  那么可以完成匹配，如果ch不是.并且字符串中的字符也是ch,也是相互匹配的，当两者">
-<meta property="og:updated_time" content="2017-04-19T12:42:38.067Z">
+<meta property="og:description" content="匹配包含 . 和   的正则表达式， . 可以表示任意一个字符，   表示它前面的字符可以出现任意次(含0次)，例如 字符串aaa和 模式a.a  和 ab  ac  a 匹配，但和 aa.a  以及 ab * a均不匹配  思路分析：每次从字符串中拿出一个字符和模式中的字符匹配，如果模式中的字符ch是.  那么可以完成匹配，如果ch不是.并且字符串中的字符也是ch,也是相互匹配的，当两者匹配时">
+<meta property="og:updated_time" content="2017-05-01T11:11:52.166Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正则表达式匹配">
-<meta name="twitter:description" content="1匹配包含 . 和 *  的正则表达式， . 可以表示任意一个字符， *  表示它前面的字符可以出现任意次(含0次)，例如 字符串aaa和 模式a.a  和 ab * ac * a 匹配，但和 aa.a  以及 ab * a均不匹配 思路分析：每次从字符串中拿出一个字符和模式中的字符匹配，如果模式中的字符ch是.  那么可以完成匹配，如果ch不是.并且字符串中的字符也是ch,也是相互匹配的，当两者">
+<meta name="twitter:description" content="匹配包含 . 和   的正则表达式， . 可以表示任意一个字符，   表示它前面的字符可以出现任意次(含0次)，例如 字符串aaa和 模式a.a  和 ab  ac  a 匹配，但和 aa.a  以及 ab * a均不匹配  思路分析：每次从字符串中拿出一个字符和模式中的字符匹配，如果模式中的字符ch是.  那么可以完成匹配，如果ch不是.并且字符串中的字符也是ch,也是相互匹配的，当两者匹配时">
   
     <link rel="alternate" href="/atom.xml" title="bloooooom" type="application/atom+xml">
   
@@ -83,7 +83,9 @@
       </header>
     
     	<div class="article-entry">
-    	    <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">匹配包含 . 和 *  的正则表达式， . 可以表示任意一个字符， *  表示它前面的字符可以出现任意次(含0次)，例如 字符串aaa和 模式a.a  和 ab * ac * a 匹配，但和 aa.a  以及 ab * a均不匹配</div></pre></td></tr></table></figure>
+    	    <blockquote>
+<p>匹配包含 . 和 <em>  的正则表达式， . 可以表示任意一个字符， </em>  表示它前面的字符可以出现任意次(含0次)，例如 字符串aaa和 模式a.a  和 ab <em> ac </em> a 匹配，但和 aa.a  以及 ab * a均不匹配</p>
+</blockquote>
 <p>思路分析：每次从字符串中拿出一个字符和模式中的字符匹配，如果模式中的字符ch是.  那么可以完成匹配，如果ch不是.并且字符串中的字符也是ch,也是相互匹配的，当两者匹配时，接着匹配后面的字符。</p>
 <p>当模式中的第二个字符不是*，如果字符串中的第一个字符和模式中的第一个字符匹配，那么字符串和模式均向后移动一个字符，然后继续匹配，如果字符串中的第一个字符和模式中的第一个字符不相匹配，则直接返回false</p>
 <p>当模式中的第二个字符是 <em>的时候，此时可能有多种匹配方式，一种是直接在模式上向后移动两个字符，相当与 </em> 和前面的字符被忽略， * 可以匹配0个字符。如果模式中的第一个字符和字符串中的第一个字符相匹配，则在字符串向后移动一个字符，模式串有两个选择： 可以向后移动两个，也可以保持不变。</p>
@@ -95,7 +97,7 @@
  	    </p>
         </div>
     <footer class="article-footer">
-      <a data-url="http://99hi.vip/2017/04/19/正则表达式匹配/" data-id="cj2609zn8001f40uggx0w8plo" class="article-share-link">Share</a>
+      <a data-url="http://99hi.vip/2017/04/19/正则表达式匹配/" data-id="cj2615v6t001avsug20xdrz8j" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试总结/">面试总结</a></li></ul>
@@ -138,7 +140,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/书籍/">书籍</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习资源/">学习资源</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游记/">游记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/经济学习/">经济学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔故事/">随笔故事</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试总结/">面试总结</a><span class="tag-list-count">5</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/书籍/">书籍</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习资源/">学习资源</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游记/">游记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔故事/">随笔故事</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试总结/">面试总结</a><span class="tag-list-count">5</span></li></ul>
     </div>
   </div>
 
@@ -148,7 +150,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">词云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/书籍/" style="font-size: 17.5px;">书籍</a> <a href="/tags/学习资源/" style="font-size: 10px;">学习资源</a> <a href="/tags/技术/" style="font-size: 12.5px;">技术</a> <a href="/tags/游记/" style="font-size: 10px;">游记</a> <a href="/tags/经济学习/" style="font-size: 10px;">经济学习</a> <a href="/tags/随笔故事/" style="font-size: 20px;">随笔故事</a> <a href="/tags/面试总结/" style="font-size: 15px;">面试总结</a>
+      <a href="/tags/书籍/" style="font-size: 17.5px;">书籍</a> <a href="/tags/学习资源/" style="font-size: 10px;">学习资源</a> <a href="/tags/技术/" style="font-size: 12.5px;">技术</a> <a href="/tags/游记/" style="font-size: 10px;">游记</a> <a href="/tags/随笔故事/" style="font-size: 20px;">随笔故事</a> <a href="/tags/面试总结/" style="font-size: 15px;">面试总结</a>
     </div>
   </div>
 
@@ -158,7 +160,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">33</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">32</span></li></ul>
     </div>
   </div>
 

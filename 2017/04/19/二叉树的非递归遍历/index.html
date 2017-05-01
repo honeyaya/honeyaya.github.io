@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://99hi.vip/2017/04/19/二叉树的非递归遍历/index.html">
 <meta property="og:site_name" content="bloooooom">
 <meta property="og:description" content="2017年tecent暑期实习生的面试，报的基础研究部，莫名的安排到了腾讯地图的面试，中间的故事估计只有hr清楚吧 由于是第一面，面试官主要是围绕简历上的项目展开，或者说是跟他们做的东西有一定的契合度  GBDT和决策树以及LR的比较，这个真心得自己实现下，虽然做项目时候，都是直接调用的  面试官提到假如给你训练集不是很大的数据需要人工来完成标注，分的类大约有两百多类，大多数是地名而且是真实的？">
-<meta property="og:updated_time" content="2017-04-19T12:59:39.508Z">
+<meta property="og:updated_time" content="2017-05-01T11:10:43.860Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二叉树的非递归遍历">
 <meta name="twitter:description" content="2017年tecent暑期实习生的面试，报的基础研究部，莫名的安排到了腾讯地图的面试，中间的故事估计只有hr清楚吧 由于是第一面，面试官主要是围绕简历上的项目展开，或者说是跟他们做的东西有一定的契合度  GBDT和决策树以及LR的比较，这个真心得自己实现下，虽然做项目时候，都是直接调用的  面试官提到假如给你训练集不是很大的数据需要人工来完成标注，分的类大约有两百多类，大多数是地名而且是真实的？">
@@ -89,8 +89,11 @@
 <li><p>GBDT和决策树以及LR的比较，这个真心得自己实现下，虽然做项目时候，都是直接调用的</p>
 </li>
 <li><p>面试官提到假如给你训练集不是很大的数据需要人工来完成标注，分的类大约有两百多类，大多数是地名而且是真实的？ ps正好跟做过的项目给的条件对立</p>
-<p>​    </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">给的两个思路：</div><div class="line">	1.建立一个“白名单”，考虑到是真实数据，维护一个小型的数据库，可以减小人工工作量，更多的是基于规则的一种办法，这种的好处在于准确率比较高，但是鲁棒性不是很强</div><div class="line"></div><div class="line">	2.对训练数据进行聚类，无监督的学习方法，看聚出来的效果</div></pre></td></tr></table></figure>
+<blockquote>
+<p>给的两个思路：</p>
+<p>1.建立一个“白名单”，考虑到是真实数据，维护一个小型的数据库，可以减小人工工作量，更多的是基于规则的一种办法，这种的好处在于准确率比较高，但是鲁棒性不是很强</p>
+<p>2.对训练数据进行聚类，无监督的学习方法，看聚出来的效果</p>
+</blockquote>
 <p>不过面试官并没有给反馈，不知道这个答案怎么样</p>
 </li>
 <li><p>二叉树的非递归遍历</p>
@@ -124,7 +127,7 @@ void InOrder(TreeNode *root){
  	    </p>
         </div>
     <footer class="article-footer">
-      <a data-url="http://99hi.vip/2017/04/19/二叉树的非递归遍历/" data-id="cj2609zlg000h40ugy0xhukae" class="article-share-link">Share</a>
+      <a data-url="http://99hi.vip/2017/04/19/二叉树的非递归遍历/" data-id="cj2615v52000jvsug1uoyqtyh" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试总结/">面试总结</a></li></ul>
@@ -167,7 +170,7 @@ void InOrder(TreeNode *root){
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/书籍/">书籍</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习资源/">学习资源</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游记/">游记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/经济学习/">经济学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔故事/">随笔故事</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试总结/">面试总结</a><span class="tag-list-count">5</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/书籍/">书籍</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习资源/">学习资源</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游记/">游记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔故事/">随笔故事</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试总结/">面试总结</a><span class="tag-list-count">5</span></li></ul>
     </div>
   </div>
 
@@ -177,7 +180,7 @@ void InOrder(TreeNode *root){
   <div class="widget-wrap">
     <h3 class="widget-title">词云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/书籍/" style="font-size: 17.5px;">书籍</a> <a href="/tags/学习资源/" style="font-size: 10px;">学习资源</a> <a href="/tags/技术/" style="font-size: 12.5px;">技术</a> <a href="/tags/游记/" style="font-size: 10px;">游记</a> <a href="/tags/经济学习/" style="font-size: 10px;">经济学习</a> <a href="/tags/随笔故事/" style="font-size: 20px;">随笔故事</a> <a href="/tags/面试总结/" style="font-size: 15px;">面试总结</a>
+      <a href="/tags/书籍/" style="font-size: 17.5px;">书籍</a> <a href="/tags/学习资源/" style="font-size: 10px;">学习资源</a> <a href="/tags/技术/" style="font-size: 12.5px;">技术</a> <a href="/tags/游记/" style="font-size: 10px;">游记</a> <a href="/tags/随笔故事/" style="font-size: 20px;">随笔故事</a> <a href="/tags/面试总结/" style="font-size: 15px;">面试总结</a>
     </div>
   </div>
 
@@ -187,7 +190,7 @@ void InOrder(TreeNode *root){
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">33</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">32</span></li></ul>
     </div>
   </div>
 

@@ -5,22 +5,22 @@
   
   <title>c++ STL | bloooooom</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="STL String string 类是一个模板类，用意字符串操作 1.构造赋值 1234567string s1 = &quot;hello&quot;string s2(&quot;hello&quot;)string s2 = s1s4.assign(s2) 2.字符访问 12345671.[]   s[0]2.at(int) s.at(2)  有范围检查，超过范围，out of range 异常3.substr(int,int)">
+  <meta name="description" content="STL String string 类是一个模板类，用意字符串操作 1.构造赋值  string s1 = “hello” string s2(“hello”) string s2 = s1 s4.assign(s2)  2.字符访问  1.[]   s[0] 2.at(int) s.at(2)  有范围检查，超过范围，out of range 异常 3.substr(int,int)  s2=s">
 <meta name="keywords" content="技术">
 <meta property="og:type" content="article">
 <meta property="og:title" content="c++ STL">
 <meta property="og:url" content="http://99hi.vip/2017/04/13/C++之STL/index.html">
 <meta property="og:site_name" content="bloooooom">
-<meta property="og:description" content="STL String string 类是一个模板类，用意字符串操作 1.构造赋值 1234567string s1 = &quot;hello&quot;string s2(&quot;hello&quot;)string s2 = s1s4.assign(s2) 2.字符访问 12345671.[]   s[0]2.at(int) s.at(2)  有范围检查，超过范围，out of range 异常3.substr(int,int)">
+<meta property="og:description" content="STL String string 类是一个模板类，用意字符串操作 1.构造赋值  string s1 = “hello” string s2(“hello”) string s2 = s1 s4.assign(s2)  2.字符访问  1.[]   s[0] 2.at(int) s.at(2)  有范围检查，超过范围，out of range 异常 3.substr(int,int)  s2=s">
 <meta property="og:image" content="http://i4.buimg.com/567571/6a3d341d15587b86.png">
 <meta property="og:image" content="http://i4.buimg.com/567571/c472890af656bf16.png">
 <meta property="og:image" content="http://i1.piimg.com/567571/33b2c17f26a560f9.png">
 <meta property="og:image" content="http://i4.buimg.com/567571/6cc5230e96d16947.png">
 <meta property="og:image" content="http://i1.piimg.com/567571/ac386ccd264d2777.png">
-<meta property="og:updated_time" content="2017-04-24T14:26:14.152Z">
+<meta property="og:updated_time" content="2017-05-01T11:06:21.815Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c++ STL">
-<meta name="twitter:description" content="STL String string 类是一个模板类，用意字符串操作 1.构造赋值 1234567string s1 = &quot;hello&quot;string s2(&quot;hello&quot;)string s2 = s1s4.assign(s2) 2.字符访问 12345671.[]   s[0]2.at(int) s.at(2)  有范围检查，超过范围，out of range 异常3.substr(int,int)">
+<meta name="twitter:description" content="STL String string 类是一个模板类，用意字符串操作 1.构造赋值  string s1 = “hello” string s2(“hello”) string s2 = s1 s4.assign(s2)  2.字符访问  1.[]   s[0] 2.at(int) s.at(2)  有范围检查，超过范围，out of range 异常 3.substr(int,int)  s2=s">
 <meta name="twitter:image" content="http://i4.buimg.com/567571/6a3d341d15587b86.png">
   
     <link rel="alternate" href="/atom.xml" title="bloooooom" type="application/atom+xml">
@@ -93,25 +93,49 @@
 <h5 id="String"><a href="#String" class="headerlink" title="String"></a>String</h5><p><img src="http://i4.buimg.com/567571/6a3d341d15587b86.png" alt="1"></p>
 <p>string 类是一个模板类，用意字符串操作</p>
 <p>1.构造赋值</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">string s1 = "hello"</div><div class="line"></div><div class="line">string s2("hello")</div><div class="line"></div><div class="line">string s2 = s1</div><div class="line"></div><div class="line">s4.assign(s2)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>string s1 = “hello”</p>
+<p>string s2(“hello”)</p>
+<p>string s2 = s1</p>
+<p>s4.assign(s2)</p>
+</blockquote>
 <p>2.字符访问</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">1.[]   s[0]</div><div class="line"></div><div class="line">2.at(int) s.at(2)  有范围检查，超过范围，out of range 异常</div><div class="line"></div><div class="line">3.substr(int,int)  s2=s1.substr(4,5) 从s1的下标4开始取5个字符</div><div class="line"></div><div class="line">4.c_str()返回const char * 类型的字符串</div></pre></td></tr></table></figure>
+<blockquote>
+<p>1.[]   s[0]</p>
+<p>2.at(int) s.at(2)  有范围检查，超过范围，out of range 异常</p>
+<p>3.substr(int,int)  s2=s1.substr(4,5) 从s1的下标4开始取5个字符</p>
+<p>4.c_str()返回const char * 类型的字符串</p>
+</blockquote>
 <p>3.容量</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1. length() , size() </div><div class="line">2. empty()</div><div class="line">3. string对象的大小不需要某个特殊字符作为结束符，可以用成员属性</div><div class="line">   来保存当前对象的大小</div></pre></td></tr></table></figure>
+<blockquote>
+<ol>
+<li>length() , size() </li>
+<li>empty()</li>
+<li>string对象的大小不需要某个特殊字符作为结束符，可以用成员属性<br>来保存当前对象的大小</li>
+</ol>
+</blockquote>
 <p>4.搜索</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1.int p = str.find("CG",2) // 从位置2开始查找"CG",第一次出现的位置</div><div class="line"></div><div class="line">2.rfind() 从后给前找</div></pre></td></tr></table></figure>
+<blockquote>
+<p>1.int p = str.find(“CG”,2) // 从位置2开始查找”CG”,第一次出现的位置</p>
+<p>2.rfind() 从后给前找</p>
+</blockquote>
 <p>5.比较</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1.s1.compare(s0)  </div><div class="line"></div><div class="line">2.使用关系运算符 operator== &gt; ,&gt;=, &lt;, &lt;= ,!=</div></pre></td></tr></table></figure>
+<blockquote>
+<p>1.s1.compare(s0)  </p>
+<p>2.使用关系运算符 operator== &gt; ,&gt;=, &lt;, &lt;= ,!=</p>
+</blockquote>
 <p>6.修改器</p>
-<pre><code>1.+ or  += 连接
-2.append(string,int,int)  s2.append(s2,5,6)  5是位置，6是长度
-3.insert()
-4.push_back()/pop_back()
-5.replace(int,int,string)  起始位置以及长度改成某字符串 
-</code></pre><p>7.流输入输出</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">支持 &gt;&gt; or &lt;&lt;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>1.+ or  += 连接<br>2.append(string,int,int)  s2.append(s2,5,6)  5是位置，6是长度<br>3.insert()<br>4.push_back()/pop_back()<br>5.replace(int,int,string)  起始位置以及长度改成某字符串 </p>
+</blockquote>
+<p>7.流输入输出</p>
+<blockquote>
+<p>支持 &gt;&gt; or &lt;&lt; </p>
+</blockquote>
 <p>8.类型转换</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">to_string()</div></pre></td></tr></table></figure>
+<blockquote>
+<p>to_string()</p>
+</blockquote>
 <hr>
 <p>c++ 两个方面体现了重用</p>
 <ul>
@@ -146,7 +170,7 @@
  	    </p>
         </div>
     <footer class="article-footer">
-      <a data-url="http://99hi.vip/2017/04/13/C++之STL/" data-id="cj2609zk4000140ugokl4iwfk" class="article-share-link">Share</a>
+      <a data-url="http://99hi.vip/2017/04/13/C++之STL/" data-id="cj2615v480004vsuguxs9rj9l" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
@@ -157,11 +181,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/04/12/家族传承/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/04/12/Thinking-in-c/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          家族办公室
+          Thinking in c++
         
       </div>
     </a>
@@ -189,7 +213,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/书籍/">书籍</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习资源/">学习资源</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游记/">游记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/经济学习/">经济学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔故事/">随笔故事</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试总结/">面试总结</a><span class="tag-list-count">5</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/书籍/">书籍</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习资源/">学习资源</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游记/">游记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔故事/">随笔故事</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试总结/">面试总结</a><span class="tag-list-count">5</span></li></ul>
     </div>
   </div>
 
@@ -199,7 +223,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">词云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/书籍/" style="font-size: 17.5px;">书籍</a> <a href="/tags/学习资源/" style="font-size: 10px;">学习资源</a> <a href="/tags/技术/" style="font-size: 12.5px;">技术</a> <a href="/tags/游记/" style="font-size: 10px;">游记</a> <a href="/tags/经济学习/" style="font-size: 10px;">经济学习</a> <a href="/tags/随笔故事/" style="font-size: 20px;">随笔故事</a> <a href="/tags/面试总结/" style="font-size: 15px;">面试总结</a>
+      <a href="/tags/书籍/" style="font-size: 17.5px;">书籍</a> <a href="/tags/学习资源/" style="font-size: 10px;">学习资源</a> <a href="/tags/技术/" style="font-size: 12.5px;">技术</a> <a href="/tags/游记/" style="font-size: 10px;">游记</a> <a href="/tags/随笔故事/" style="font-size: 20px;">随笔故事</a> <a href="/tags/面试总结/" style="font-size: 15px;">面试总结</a>
     </div>
   </div>
 
@@ -209,7 +233,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">33</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">32</span></li></ul>
     </div>
   </div>
 
