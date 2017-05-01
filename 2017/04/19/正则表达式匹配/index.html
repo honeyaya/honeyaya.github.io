@@ -51,9 +51,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://99hi.vip"></form>
@@ -90,12 +90,12 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">#include <span class="tag">&lt;<span class="name">iostream</span>&gt;</span></div><div class="line">#include <span class="tag">&lt;<span class="name">cstring</span>&gt;</span></div><div class="line">using namespace std;</div><div class="line"></div><div class="line">bool match(char* str,char* pattern)&#123;</div><div class="line">	if(*str=='\0' &amp;&amp; *pattern == '\0')</div><div class="line">		return true;</div><div class="line">		</div><div class="line">	if(*str!='\0' &amp;&amp; *pattern == '\0')</div><div class="line">		return false;</div><div class="line">		</div><div class="line">	if(*(pattern + 1) == '*')&#123;</div><div class="line">		if(*pattern == *str || (*pattern == '.' &amp;&amp; *str != '\0'))</div><div class="line">			return match(str + 1, pattern + 2) || match(str + 1, pattern) || match(str, pattern + 2);</div><div class="line">		else</div><div class="line">			return match(str, pattern + 2); </div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	if(*str == *pattern || (*pattern == '.' &amp;&amp; *str != '\0'))&#123;</div><div class="line">		return match(str + 1, pattern + 1);</div><div class="line">	&#125;</div><div class="line">	return false;</div><div class="line">&#125;</div><div class="line">int main()&#123;</div><div class="line">	char str[100],pattern[100];</div><div class="line">	while(cin &gt;&gt; str &gt;&gt; pattern)&#123;</div><div class="line">		bool ans = match(str,pattern);</div><div class="line">		printf("%d\n",ans);</div><div class="line">	&#125;</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>自动转换机，状态的选择</p>
  
-	    <p class="article-more-link">
-	       <a href="/2017/04/19/正则表达式匹配/#more">read more</a>
- 	    </p>
+	    //<p class="article-more-link">
+	     //  <a href="/2017/04/19/正则表达式匹配/#more">read more</a>
+ 	    //</p>
         </div>
     <footer class="article-footer">
-      <a data-url="http://99hi.vip/2017/04/19/正则表达式匹配/" data-id="cj1wb82nl001ehgughuewsaj8" class="article-share-link">Share</a>
+      <a data-url="http://99hi.vip/2017/04/19/正则表达式匹配/" data-id="cj25re00x001dscugif6gw6r2" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试总结/">面试总结</a></li></ul>
@@ -107,7 +107,7 @@
 <nav id="article-nav">
   
     <a href="/2017/04/19/二叉树的非递归遍历/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+      <strong class="article-nav-caption">Récent</strong>
       <div class="article-nav-title">
         
           二叉树的非递归遍历
@@ -117,7 +117,7 @@
   
   
     <a href="/2017/04/21/2017微软预科生面试/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Ancien</strong>
       <div class="article-nav-title">2017微软预科生面试</div>
     </a>
   
@@ -136,7 +136,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">标签</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/书籍/">书籍</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习资源/">学习资源</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游记/">游记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/经济学习/">经济学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔故事/">随笔故事</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试总结/">面试总结</a><span class="tag-list-count">5</span></li></ul>
     </div>
@@ -156,7 +156,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">归档</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">33</span></li></ul>
     </div>
@@ -166,7 +166,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
         
@@ -194,6 +194,7 @@
     </div>
   </div>
 
+
   
 </aside>
         
@@ -203,7 +204,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 SmileCrazy<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
