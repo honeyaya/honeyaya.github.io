@@ -1066,8 +1066,7 @@ a.article-title:hover {
   line-height: 1.6em;
   font-size: 0.85em;
 }
-.article-entry pre,
-.article-entry .highlight {
+.article-entry pre {
   background: #2d2d2d;
   margin: 0 -20px;
   padding: 15px 20px;
