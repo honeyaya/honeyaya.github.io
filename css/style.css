@@ -1103,7 +1103,7 @@ a.article-title:hover {
 }
 .article-entry .highlight table {
   margin: 0;
-  table-layout: fixed;
+  table-layout: auto;
 }
 .article-entry .highlight td {
   border: none;
