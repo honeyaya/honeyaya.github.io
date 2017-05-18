@@ -3,21 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Git-小总结 | bloooooom</title>
+  <title>钟形罩 | bloooooom</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="图解git:http://marklodato.github.io/visual-git-guide/index-zh-cn.html  本地提交 git add files 把文件放到暂存区域 Gitcommit  给暂存区域生成快照并提交 Git reset –files 用来撤销最后一次的git add files  Git checkout– files 把文件从暂存区复制到工作目录，用来">
-<meta name="keywords" content="技术">
+  <meta name="description" content="读了好久时间的一本书 “我合上眼眸，世界倒地而死” “我抬起眼帘，一切重获新生”  Mad Girl’s Love Song                                                                   “I shut my eyes and all the world drops dead;I lift my lids and all is">
+<meta name="keywords" content="书籍">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git-小总结">
-<meta property="og:url" content="http://99hi.vip/2017/05/14/Git-小总结/index.html">
+<meta property="og:title" content="钟形罩">
+<meta property="og:url" content="http://99hi.vip/2017/05/18/钟形罩/index.html">
 <meta property="og:site_name" content="bloooooom">
-<meta property="og:description" content="图解git:http://marklodato.github.io/visual-git-guide/index-zh-cn.html  本地提交 git add files 把文件放到暂存区域 Gitcommit  给暂存区域生成快照并提交 Git reset –files 用来撤销最后一次的git add files  Git checkout– files 把文件从暂存区复制到工作目录，用来">
-<meta property="og:image" content="http://i1.piimg.com/588926/eb5b9f43e7f85ae5.png">
-<meta property="og:updated_time" content="2017-05-14T03:01:27.995Z">
+<meta property="og:description" content="读了好久时间的一本书 “我合上眼眸，世界倒地而死” “我抬起眼帘，一切重获新生”  Mad Girl’s Love Song                                                                   “I shut my eyes and all the world drops dead;I lift my lids and all is">
+<meta property="og:updated_time" content="2017-05-18T16:29:07.703Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git-小总结">
-<meta name="twitter:description" content="图解git:http://marklodato.github.io/visual-git-guide/index-zh-cn.html  本地提交 git add files 把文件放到暂存区域 Gitcommit  给暂存区域生成快照并提交 Git reset –files 用来撤销最后一次的git add files  Git checkout– files 把文件从暂存区复制到工作目录，用来">
-<meta name="twitter:image" content="http://i1.piimg.com/588926/eb5b9f43e7f85ae5.png">
+<meta name="twitter:title" content="钟形罩">
+<meta name="twitter:description" content="读了好久时间的一本书 “我合上眼眸，世界倒地而死” “我抬起眼帘，一切重获新生”  Mad Girl’s Love Song                                                                   “I shut my eyes and all the world drops dead;I lift my lids and all is">
   
     <link rel="alternate" href="/atom.xml" title="bloooooom" type="application/atom+xml">
   
@@ -64,10 +62,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Git-小总结" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-钟形罩" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/05/14/Git-小总结/" class="article-date">
-  <time datetime="2017-05-14T02:53:45.000Z" itemprop="datePublished">2017-05-14</time>
+    <a href="/2017/05/18/钟形罩/" class="article-date">
+  <time datetime="2017-05-18T14:43:51.000Z" itemprop="datePublished">2017-05-18</time>
 </a>
     
   </div>
@@ -78,41 +76,41 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Git-小总结
+      钟形罩
     </h1>
   
 
       </header>
     
     	<div class="article-entry">
-    	    <p>图解git:<a href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html" target="_blank" rel="external">http://marklodato.github.io/visual-git-guide/index-zh-cn.html</a></p>
-<p><img src="http://i1.piimg.com/588926/eb5b9f43e7f85ae5.png" alt=""></p>
-<p>本地提交 git add files 把文件放到暂存区域</p>
-<p>Gitcommit  给暂存区域生成快照并提交</p>
-<p>Git reset –files 用来撤销最后一次的git add files </p>
-<p>Git checkout– files 把文件从暂存区复制到工作目录，用来丢弃本地修改</p>
-<p>分支：</p>
-<p>Git 可以使用多条分支，这样就可以再不影响当前进度的情况下，用创建新的分支的方法来进行接下里的开发，何时使用分支是一门艺术，一般来说：</p>
-<p>\1. 试验性修改（常用）：测试新的算法或者为某个特别的模式重构部分代码</p>
-<p>\2. 增加新功能（常用）：为每个新功能的开发创建新的分支，完成该功能开发后，在将其合并到主分支上</p>
-<p>\3. Bug修改：修复代码中的bug，可以创建新分支来对该bug进行修改，然后将修改合并到主分支上</p>
-<p>创建分支： git branch  test</p>
-<p>切换分支： git checkout test</p>
-<p>查看分支： git branch</p>
-<p>合并分支： git checkout master </p>
-<p> git merge test</p>
-<p>删除分支： git branch -d test</p>
-<p>分支重命名： git branch -m test test2</p>
+    	    <p>读了好久时间的一本书</p>
+<p>“我合上眼眸，世界倒地而死”</p>
+<p>“我抬起眼帘，一切重获新生”</p>
+<hr>
+<p>Mad Girl’s Love Song                                                                  </p>
+<p>“I shut my eyes and all the world drops dead;<br>I lift my lids and all is born again.<br>(I think I made you up inside my head.)</p>
+<p>The stars go waltzing out in blue and red,<br>And arbitrary blackness gallops in:<br>I shut my eyes and all the world drops dead.</p>
+<p>I dreamed that you bewitched me into bed<br>And sung me moon-struck, kissed me quite insane.<br>(I think I made you up inside my head.)</p>
+<p>God topples from the sky, hell’s fires fade:<br>Exit seraphim and Satan’s men:<br>I shut my eyes and all the world drops dead.</p>
+<p>I fancied you’d return the way you said,<br>But I grow old and I forget your name.<br>(I think I made you up inside my head.)</p>
+<p>I should have loved a thunderbird instead;<br>At least when spring comes they roar back again.<br>I shut my eyes and all the world drops dead.<br>(I think I made you up inside my head.)”</p>
+<p>西尔维亚20岁的一部作品</p>
+<p>《钟形罩》是她的一部自传，整部作品的自我对话，让我想起来《麦田里的守望者》</p>
+<p>开头的她拥有所有女孩子羡慕的一切，走到哪里都是焦点的所在，可那又怎样呢，看似喜剧笔调下的本质是悲剧，人们拒绝认真对待一个女人丰富颤栗的情感，指望通过电休克疗法治愈心灵的绝望。事实上她已经令人恐惧地滑向疯狂的深渊。 普拉斯与另一位杰出诗人休斯的惊世恋情是二十世纪英美诗坛最大的公案，女诗人年仅三十岁便自杀自亡，她不曾预知自己会获得普利策奖，作品又极其畅销。虽然本书中“我”最终走出了黑暗，谁又能看透普拉斯本人内心的隐秘?—-引自豆瓣</p>
+<p>内心的不安与迷茫纠结，那么的真实，戴着镣铐跳舞的我们，这样的结束对她来说是一种释放吧，如同海子和三毛，生无可恋，恋无可恋</p>
+<p>这个世界还有太多的x和y的问题，但是逃避是不行的，这是通过一代人乃至几代人的努力才能逐渐克服的问题，想起前段时间知乎上有个帖子“女生优秀的标准好低哦”</p>
+<p>“我怎么知道有一天——在学院，或者欧洲，某个地方，任何地方——那个钟形罩，还有它那种种叫人透不过气来的扭曲视像，不会再度降临呢？”</p>
+<p>钟形罩一定会有不存在的一天！！！</p>
  
 	    <p class="article-more-link">
-	       <a href="/2017/05/14/Git-小总结/#more">read more</a>
+	       <a href="/2017/05/18/钟形罩/#more">read more</a>
  	    </p>
         </div>
     <footer class="article-footer">
-      <a data-url="http://99hi.vip/2017/05/14/Git-小总结/" data-id="cj2umt28o0015sgugyx0wo421" class="article-share-link">Share</a>
+      <a data-url="http://99hi.vip/2017/05/18/钟形罩/" data-id="cj2umt2ad001ysgug4c37u3xh" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/书籍/">书籍</a></li></ul>
 
     </footer>
   </div>
@@ -120,20 +118,15 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/05/01/三分之一的总结/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/05/18/Morgan-Stanley-summer-analyst/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          三分之一的总结
+          Morgan Stanley summer analyst
         
       </div>
     </a>
   
-  
-    <a href="/2017/05/14/js刷新页面返回/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">js刷新页面返回</div>
-    </a>
   
 </nav>
 
